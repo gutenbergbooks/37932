@@ -1,0 +1,3974 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.1//EN'
+  'http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd'>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>Le disilluse</title>
+  <style type="text/css">
+  /*<![CDATA[*/
+  /* 
+  Project Gutenberg common docutils stylesheet.
+
+  This stylesheet contains styles common to HTML and EPUB.  Put styles
+  that are specific to HTML and EPUB into their relative stylesheets.
+
+  :Author: Marcello Perathoner (webmaster@gutenberg.org)
+  :Copyright: This stylesheet has been placed in the public domain.
+
+  This stylesheet is based on:
+
+  :Author: David Goodger (goodger@python.org)
+  :Copyright: This stylesheet has been placed in the public domain.
+
+  Default cascading style sheet for the HTML output of Docutils.
+
+  */
+
+  /* ADE 1.7.2 chokes on !important and throws all css out. */
+
+  /* FONTS */
+
+  .italics    { font-style: italic }
+  .bold       { font-weight: bold }
+  .small-caps { }
+  .gesperrt   { }
+  .antiqua    { font-style: italic } /* what else can we do ? */
+  .monospaced { font-family: monospace }
+
+  .smaller    { font-size: smaller }
+  .larger     { font-size: larger }
+
+  .xx-small   { font-size: xx-small }
+  .x-small    { font-size: x-small }
+  .small      { font-size: small }
+  .medium     { font-size: medium }
+  .large      { font-size: large }
+  .x-large    { font-size: x-large }
+  .xx-large   { font-size: xx-large }
+
+  .text-transform-uppercase { text-transform: uppercase }
+  .text-transform-lowercase { text-transform: lowercase }
+  .text-transform-none      { text-transform: none }
+
+  .red        { color: red }
+  .green      { color: green }
+  .blue       { color: blue }
+  .yellow     { color: yellow }
+  .white      { color: white }
+  .gray       { color: gray }
+  .black      { color: black }
+
+  /* ALIGN */
+
+  .left       { text-align: left }
+  .center     { text-align: center }
+  .right      { text-align: right }
+  .justify    { text-align: justify }
+
+  /* LINE HEIGHT */
+
+  body        { line-height: 1.5 }
+  p           { margin: 1.5em 0 }
+
+  /* PAGINATION */
+
+  .title, .subtitle     { page-break-inside: avoid;
+                        page-break-after:  avoid }
+  .titlepage, 
+  #pg-header            { page-break-inside: avoid }
+
+  /* SECTIONS */
+
+  body         { text-align: justify }
+
+  p.noindent   { text-indent: 0 }
+
+  .boxed       { border: 1px solid black; padding: 1em }
+  .topic       { margin: 5% 0; border: 1px solid black; padding: 1em }
+  div.section  { clear: both }
+
+  div.line-block       { margin: 1.5em 0 }  /* same leading as p */
+  div.line-block.inner { margin: 0 0 0 10% }
+  div.line             { margin-left: 20%; text-indent: -20%; }
+  .line-block.noindent div.line { margin-left: 0; text-indent: 0; }
+
+  hr.docutils  { margin: 1.5em 40%; border: none; border-bottom: 1px solid black; }
+
+  .clearpage,
+  .cleardoublepage,
+  .vfill,
+  .vspace      { border: 0px solid white }
+
+  .title               { margin: 1.5em 0 }
+  .title.with-subtitle { margin-bottom: 0 }
+  .subtitle            { margin: 1.5em 0 }
+
+  /* ugly hack to give more specifity. 
+   because ADE chokes on !important */
+  .first.first { margin-top: 0 } 
+  .last.last   { margin-bottom: 0 }
+
+  /* header font style */
+  /* http://dev.w3.org/csswg/css3-fonts/#propdef-font-size */
+
+  h1.title                     { font-size: 200%; }  /* for book title only */
+  h2.title, p.subtitle.level-1 { font-size: 150%; margin-top: 4.5em;  margin-bottom: 2em }
+  h3.title, p.subtitle.level-2 { font-size: 120%; margin-top: 2.25em; margin-bottom: 1.25em }
+  h4.title, p.subtitle.level-3 { font-size: 100%; margin-top: 1.5em;  margin-bottom: 1.5em;  font-weight: bold; }
+  h5.title, p.subtitle.level-4 { font-size:  89%; margin-top: 1.87em; margin-bottom: 1.69em; font-style: italic; }
+  h6.title, p.subtitle.level-5 { font-size:  60%; margin-top: 3.5em;  margin-bottom: 2.5em }
+
+  /* title page */
+
+  h1.document-title, 
+  p.document-subtitle     { text-align: center }
+
+  div.titlepage,
+  #pg-header,
+  h1.document-title       { margin: 10% 0 5% 0 }
+  p.document-subtitle     { margin:  0  0 5% 0 }
+
+  /* PG header and footer */
+  #pg-machine-header { }
+  #pg-produced-by { }
+
+  li.toc-entry            { list-style-type: none }
+  ul.open li, ol.open li  { margin-bottom: 1.5em }
+
+  p.attribution           { margin-top: 0; text-align: right }
+
+  .example-rendered { 
+    margin: 1em 5%; border: 1px dotted red;  padding: 1em; background-color: #ffd }
+  .literal-block.example-source   { 
+    margin: 1em 5%; border: 1px dotted blue; padding: 1em; background-color: #eef }
+
+  /* DROPCAPS */
+
+  /* BLOCKQUOTES */
+
+  blockquote { margin: 1.5em 10% }
+
+  blockquote.epigraph { }
+
+  blockquote.highlights { }
+
+  div.local-contents { margin: 1.5em 10% }
+
+  div.abstract { margin: 3em 10% }
+  div.caption  { margin: 1.5em 10%; text-align: center; font-style: italic }
+  div.legend   { margin: 1.5em 10% }
+
+  .hidden { display: none }
+
+  .invisible { visibility: hidden; color: white } /* white: mozilla print bug */
+
+  a.toc-backref {
+  text-decoration: none ;
+  color: black }
+
+  dl.docutils dd {
+  margin-bottom: 0.5em }
+
+  div.figure { margin: 3em 0 }
+
+  img { max-width: 100% }
+
+  div.footer, div.header {
+  clear: both;
+  font-size: smaller }
+
+  div.sidebar {
+  margin: 0 0 0.5em 1em ;
+  border: medium outset ;
+  padding: 1em ;
+  background-color: #ffffee ;
+  width: 40% ;
+  float: right ;
+  clear: right }
+
+  div.sidebar p.rubric {
+  font-family: sans-serif ;
+  font-size: medium }
+
+  div.topic {
+  margin: 3em 0 }
+
+  ol.simple, ul.simple { margin: 1.5em 0 }
+
+  ol.toc-list,    ul.toc-list    { padding-left:  0  }
+  ol ol.toc-list, ul ul.toc-list { padding-left:  5% }
+
+  ol.arabic {
+  list-style: decimal }
+
+  ol.loweralpha {
+  list-style: lower-alpha }
+
+  ol.upperalpha {
+  list-style: upper-alpha }
+
+  ol.lowerroman {
+  list-style: lower-roman }
+
+  ol.upperroman {
+  list-style: upper-roman }
+
+  p.credits {
+  font-style: italic ;
+  font-size: smaller }
+
+  p.label {
+  white-space: nowrap }
+
+  p.rubric {
+  font-weight: bold ;
+  font-size: larger ;
+  color: maroon ;
+  text-align: center }
+
+  p.sidebar-title {
+  font-family: sans-serif ;
+  font-weight: bold ;
+  font-size: larger }
+
+  p.sidebar-subtitle {
+  font-family: sans-serif ;
+  font-weight: bold }
+
+  p.topic-title {
+  font-weight: bold }
+
+  pre.address {
+  margin-bottom: 0 ;
+  margin-top: 0 ;
+  font: inherit }
+
+  .literal-block, .doctest-block {
+  margin-left: 2em ;
+  margin-right: 2em; }
+
+  span.classifier {
+  font-family: sans-serif ;
+  font-style: oblique }
+
+  span.classifier-delimiter {
+  font-family: sans-serif ;
+  font-weight: bold }
+
+  span.interpreted {
+  font-family: sans-serif }
+
+  span.option {
+  white-space: nowrap }
+
+  span.pre {
+  white-space: pre }
+
+  span.problematic {
+  color: red }
+
+  span.section-subtitle {
+  /* font-size relative to parent (h1..h6 element) */
+  font-size: 100% }
+
+  table { margin-top: 1.5em; margin-bottom: 1.5em; border-spacing: 0 }
+  table.align-left, table.align-right { margin-top: 0 }
+
+  table.table                { border-collapse: collapse; }
+  table.table thead          { border: 1px solid black; border-width: 2px 0 0 }
+  table.table tbody          { border: 1px solid black; border-width: 2px 0 }
+  table.table tr             { border: 1px solid black; border-width: 0 0 1px }
+  table.table tr.last        { border-width: 0 }
+  table.table td, 
+  table.table th             { padding: 1ex 1em; vertical-align: middle }
+
+  table.table.norules tr             { border-width: 0 }
+  table.table.norules td, 
+  table.table.norules th             { padding: 0.5ex 1em }
+  table.table.norules tr.first td    { padding-top: 1ex }
+  table.table.norules tr.last td     { padding-bottom: 1ex }
+  table.table.norules tr.first th    { padding-top: 1ex }
+  table.table.norules tr.last th     { padding-bottom: 1ex }
+
+
+  table.citation {
+  border-left: solid 1px gray;
+  margin-left: 1px }
+
+  table.docinfo {
+  margin: 3em 4em }
+
+  table.docutils { }
+
+  tr.footnote.footnote td, tr.footnote.footnote th { 
+  padding: 0 0.5em 1.5em;
+  }
+
+  table.docutils td, table.docutils th,
+  table.docinfo td, table.docinfo th {
+  padding: 0 0.5em;
+  vertical-align: top }
+
+  table.docutils th.field-name, table.docinfo th.docinfo-name {
+  font-weight: bold ;
+  text-align: left ;
+  white-space: nowrap ;
+  padding-left: 0 }
+
+  /* used to remove borders from tables and images */
+  .borderless, table.borderless td, table.borderless th {
+  border: 0 }
+
+  table.borderless td, table.borderless th {
+  /* Override padding for "table.docutils td" with "!important".
+     The right padding separates the table cells. */
+  padding: 0 0.5em 0 0 } /* FIXME: was !important */
+
+  h1 tt.docutils, h2 tt.docutils, h3 tt.docutils,
+  h4 tt.docutils, h5 tt.docutils, h6 tt.docutils {
+  font-size: 100% }
+
+  ul.auto-toc {
+  list-style-type: none }
+  /*]]>*/
+  </style>
+  <style type="text/css">
+  /*<![CDATA[*/
+  /* 
+  Project Gutenberg HTML docutils stylesheet.
+
+  This stylesheet contains styles specific to HTML.
+  */
+
+  /* FONTS */
+
+  em                { font-style: normal }
+  strong            { font-weight: normal }
+  .small-caps       { font-variant: small-caps }
+  .gesperrt         { letter-spacing: 0.1em }
+
+  /* ALIGN */
+
+  .align-left       { clear: left;
+                    float: left;
+                    margin-right: 1em }
+
+  .align-right      { clear: right;
+                    float: right;
+                    margin-left: 1em }
+
+  .align-center     { margin-left: auto;
+                    margin-right: auto }
+
+  div.shrinkwrap    { display: table; }
+
+  /* SECTIONS */
+
+  body              { margin: 5% 10% 5% 10% }
+
+  /* compact list items containing just one p */
+  li p.pfirst       { margin-top: 0; margin-bottom: 0 } 
+
+  .first            { margin-top: 0 !important } 
+  .last             { margin-bottom: 0 !important }
+
+  .dropcap          { float: left; }
+  span.dropcap      { margin: 0 0.1em 0 0; line-height: 1 }
+  img.dropcap       { margin: 0 0.5em 0 0; }
+
+  /* PAGINATION */
+
+  @media screen {
+   .coverpage, .frontispiece, .titlepage, .verso, 
+   .contents, .foreword, .preface, .introduction, .dedication, .prologue,
+   .epilogue, .appendix, .glossary, .bibliography, .index, .colophon,
+   .footnotes, .plainpage
+                      { margin: 10%  0 }
+   .clearpage         { margin: 10% }
+   .cleardoublepage   { margin: 10% }
+   .vfill             { margin:  5% 10% }
+  }
+
+  @media print {
+    /* margin-top disappears after a page-break, thus padding */
+   .frontispiece, .verso, .plainpage, .section.level-2,
+   .clearpage         { page-break-before: always; padding-top: 1px }
+
+   .coverpage, .titlepage, 
+   .contents, .foreword, .preface, .introduction, .dedication, .prologue,
+   .epilogue, .appendix, .glossary, .bibliography, .index, .colophon,
+   .footnotes,
+   .cleardoublepage   { page-break-before: right; padding-top: 1px }
+
+   .vfill             { margin-top: 20% }
+   h2.title           { margin-top: 20% }
+  }
+  /*]]>*/
+  </style>
+  <style type="text/css">
+  /*<![CDATA[*/
+  .pageno       { position: absolute; right: 95%; font: medium sans-serif; }
+  .pageno:after { color: gray; content: '[' attr(title) ']' }
+  .toc-pageref  { float: right }
+  pre           { font-family: monospace; font-size: 0.9em; white-space: pre-wrap }
+  /*]]>*/
+  </style>
+</head>
+<body>
+  <div class="document" id="le-disilluse">
+    <h1 class="document-title level-1 pfirst title">Le disilluse</h1><!-- -*- encoding: utf-8 -*- -->
+    <div class="container coverpage">
+      <div class="align-center auto-scaled figure" style="margin-left: 24%; width: 51%"><img style="display: block; width: 100%" alt="images/cover.jpg" src="images/cover.jpg" width="100%" /></div>
+    </div>
+    <div class="container titlepage">
+      <div class="center line-block noindent outermost">
+        <div class="line">
+          <span class="large">ROBERTO BRACCO</span>
+        </div>
+        <div class="line">
+          &nbsp;
+        </div>
+        <div class="line">
+          <span class="xx-large">TEATRO</span>
+        </div>
+        <div class="line">
+          &nbsp;
+        </div>
+        <div class="line">
+          <span class="large">VOLUME PRIMO</span>
+        </div>
+        <div class="line">
+          &nbsp;
+        </div>
+        <div class="line">
+          NON FARE AD ALTRI... — LUI LEI LUI —
+        </div>
+        <div class="line">
+          UN'AVVENTURA DI VIAGGIO — UNA DONNA —
+        </div>
+        <div class="line">
+          <strong class="bold">LE DISILLUSE</strong> — DOPO IL VEGLIONE
+        </div>
+        <div class="line">
+          &nbsp;
+        </div>
+        <div class="line">
+          <span class="small">2ª EDIZIONE.</span>
+        </div>
+        <div class="line">
+          &nbsp;
+        </div>
+        <div class="line">
+          &nbsp;
+        </div>
+        <div class="line">
+          &nbsp;
+        </div>
+        <div class="line">
+          REMO SANDRON — Editore
+        </div>
+        <div class="line">
+          &nbsp;
+        </div>
+        <div class="line">
+          <span class="small">Libraio della Real Casa</span>
+        </div>
+        <div class="line">
+          <span class="small">MILANO-PALERMO-NAPOLI</span>
+        </div>
+      </div>
+    </div>
+    <div class="container verso">
+      <p class="center pfirst">PROPRIETÀ LETTERARIA</p>
+      <blockquote>
+        <div>
+          <p class="pfirst small"><em class="italics">I diritti di riproduzione e di traduzione sono riservati per tutti i paesi, non escluso il Regno di Svezia e quello di Norvegia.</em></p>
+          <p class="pnext small">È assolutamente proibito di rappresentare questi lavori senza il consenso scritto dell'Autore <em class="italics">(Art. 14 del Testo Unico 17 Settembre 1882)</em>.</p>
+          <p class="pnext small">Published in Palermo, 10th. June Privilege of Copyright in the United States reserved under the Act approved March 3rd. 1905, by Roberto Bracco and Remo Sandron.</p>
+          <p class="pnext small">Off. Tip. Sandron — 126 — I — 290312.</p>
+        </div>
+      </blockquote>
+    </div>
+    <hr class="docutils" />
+    <div class="clearpage"></div>
+    <div class="center line-block noindent outermost">
+      <div class="line">
+        <span class="x-large">LE DISILLUSE.</span>
+      </div>
+      <div class="line">
+        &nbsp;
+      </div>
+      <div class="line">
+        <span class="italics large">Fiaba per Marionette, in un atto.</span>
+      </div>
+    </div>
+    <p class="pfirst">Questa «<em class="italics">fiaba</em>» fu improvvisata in pochi giorni, come si rileva dal prologhetto, per invito della <em class="italics">Società Filarmonica</em> di Napoli e rappresentata, con musica del maestro <span class="small-caps">Mario Costa</span>, nel salone di quella <em class="italics">Società</em>, intorno al 1888. Ai due autori fu assegnato il compito di offrire, soprattutto, «un grazioso spettacolo di atteggiamenti, di colori e di armonie». Il <em class="italics">libretto</em> non doveva essere che «un pretesto per far comparire sulla scena, in costumi fantastici, una schiera di eleganti giovanotti e fanciulle» appartenenti all'aristocrazia, con alla testa il tenore <span class="small-caps">Marconi</span>, il baritono <span class="small-caps">Kaschman</span> e la signora <span class="small-caps">Kaschman</span>, protagonisti della festa mondana.</p>
+    <div class="clearpage"></div>
+    <p class="pnext"><span class="invisible pageno target" title="306" id="page-306"></span> <span class="invisible pageno target" title="307" id="page-307"></span></p>
+    <p class="center large pnext">PERSONAGGI DELLA FIABA:</p>
+    <blockquote>
+      <div>
+        <div class="large line-block outermost">
+          <div class="line">
+            <span class="small-caps">Fleno</span>, <em class="italics">ex re di Zano</em>.
+          </div>
+          <div class="line">
+            <span class="small-caps">Arunto</span>, <em class="italics">candidato al trono di Zano</em>.
+          </div>
+          <div class="line">
+            <span class="small-caps">Clea</span>, <em class="italics">conduttrice delle</em> Disilluse <em class="italics">e</em> Disillusa <em class="italics">anch'ella</em>.
+          </div>
+          <div class="line">
+            <span class="small-caps">Le Fanciulle disilluse</span>.
+          </div>
+          <div class="line">
+            <span class="small-caps">I Giovanotti</span>.
+          </div>
+          <div class="line">
+            &nbsp;
+          </div>
+          <div class="line">
+            <em class="italics">Cori di voci misteriose</em>.
+          </div>
+        </div>
+      </div>
+    </blockquote>
+    <p class="pfirst">Epoca, a piacere. — L'azione non si svolge in nessuna parte del mondo, ma, viceversa, poi, si svolge un po' dovunque.</p>
+    <p class="pnext"><span class="invisible pageno target" title="308" id="page-308"></span> <span class="invisible pageno target" title="309" id="page-309"></span></p>
+    <div class="level-2 section" id="prologhetto-de-le-disilluse">
+      <h2 class="center level-2 pfirst section-title title with-subtitle">PROLOGHETTO DE «LE DISILLUSE».</h2>
+      <p class="center level-2 pfirst section-subtitle subtitle" id="scritto-dall-autore-stesso-e-detto-dal-direttore-di-scena"><em class="italics">(scritto dall'Autore stesso e detto dal Direttore di scena.)</em></p>
+      <div class="center line-block noindent outermost">
+        <div class="line">
+          <span class="small-caps">Il Direttore di scena</span>
+        </div>
+      </div>
+      <p class="pfirst"><em class="italics">(a sipario calato, esce dalle quinte e, con una certa emozione, si rivolge al pubblico.)</em></p>
+      <blockquote>
+        <div>
+          <div class="line-block outermost">
+            <div class="line">
+              Per voi, piccol gran pubblico, per voi, «mondo dorato»,
+            </div>
+            <div class="line">
+              Roberto Bracco e Mario Costa hanno improvvisato
+            </div>
+            <div class="line">
+              una celia che abbonda di note e di parole,
+            </div>
+            <div class="line">
+              uno spettacolino riboccante di fole.
+            </div>
+            <div class="line">
+              Come il burattinaio, dinanzi ai bimbi attenti,
+            </div>
+            <div class="line">
+              fa muovere i fantocci, prestando lor gli accenti
+            </div>
+            <div class="line">
+              d'un estro infantilmente disinvolto, così
+            </div>
+            <div class="line">
+              i nostri cari autori han fatto lì per lì,
+            </div>
+            <div class="line">
+              accogliendo l'invito di questa Direzione
+            </div>
+            <div class="line">
+              che non chiedeva fiabe, ma un gioco da salone,
+            </div>
+            <div class="line">
+              con un profumo d'arte, per uso delle dame
+            </div>
+            <div class="line">
+              e delle damigelle. Quasi foste uno sciame
+            </div>
+            <div class="line">
+              di scolarette a spasso, sotto il pretesto della
+            </div>
+            <div class="line">
+              estemporaneità, ecco la marachella
+            </div>
+            <div class="line">
+              d'ammannirvi, in istrofe fanciullesche e neglette,
+            </div>
+            <div class="line">
+              le vicende fantastiche di certe marionette.
+            </div>
+            <div class="line">
+              E il peggio è che si allude a cose che sul serio
+            </div>
+            <div class="line">
+              <span class="invisible pageno target" title="310" id="page-310"></span>
+            </div>
+            <div class="line">
+              vi seccano, benchè... vecchie come il salterio:
+            </div>
+            <div class="line">
+              <em class="italics">l' amore delle donne, le donne nell'amore.</em>
+            </div>
+            <div class="line">
+              <em class="italics">le signorine ansiose di diventar signore,</em>
+            </div>
+            <div class="line">
+              <em class="italics">i falsi voti avversi alla</em> <span class="small-caps">maschilità</span>,
+            </div>
+            <div class="line">
+              <em class="italics">sognata da ogni donna, qual meta e qual metà....</em>
+            </div>
+            <div class="line">
+              Insomma, io penso e dico che i due burattinai,
+            </div>
+            <div class="line">
+              facendo questa burla, sono maligni assai,
+            </div>
+            <div class="line">
+              e che il trattar da bimbi persone come voi,
+            </div>
+            <div class="line">
+              per ingannarle prima, per punzecchiarle poi,
+            </div>
+            <div class="line">
+              è... <em class="italics">un atto</em> che, anche in musica, non merita clemenza.
+            </div>
+            <div class="line">
+              Ed io, che, in qualità di <em class="italics">régisseur</em>, ma senza
+            </div>
+            <div class="line">
+              aver nessuna colpa, mi trovo qui, sul banco,
+            </div>
+            <div class="line">
+              per dir così, dei rei, vo' almeno parlar franco
+            </div>
+            <div class="line">
+              e protestare contro Roberto Bracco e Mario
+            </div>
+            <div class="line">
+              Costa, pria che davanti a voi s'alzi il sipario.
+            </div>
+            <div class="line">
+              Per quel poco che c'entro in queste «Disilluse»,
+            </div>
+            <div class="line">
+              mie dame e damigelle, io v'offro le mie scuse.
+            </div>
+            <div class="line">
+              Ed un consiglio v'offro per... <em class="italics">gl'improvvisatori</em>.
+            </div>
+            <div class="line">
+              Applauditeli all'ultimo, ma, appena vengon fuori,
+            </div>
+            <div class="line">
+              lasciando cader pigre le manine guantate,
+            </div>
+            <div class="line">
+              aprite le boccucce gentili e... sbadigliate.
+            </div>
+          </div>
+        </div>
+      </blockquote>
+      <p class="center pfirst"><em class="italics">(via)</em></p>
+    </div>
+    <div class="level-2 section" id="atto-unico">
+      <h2 class="center level-2 pfirst section-title title"><span class="invisible pageno target" title="311" id="page-311"></span>ATTO UNICO.</h2>
+      <blockquote class="epigraph">
+        <div>
+          <div class="line-block outermost">
+            <div class="line">
+              Le mariage est de toutes les choses sérieuses
+            </div>
+            <div class="line">
+              la chose la plus bouffonne.
+            </div>
+            <div class="line">
+              &nbsp;
+            </div>
+            <div class="inner line-block">
+              <div class="line">
+                <span class="small-caps">Beaumarchais</span>.
+              </div>
+            </div>
+          </div>
+        </div>
+      </blockquote>
+      <p class="pfirst"><em class="italics">Una campagna incolta, ricca di fiori e di verzura. In fondo, si eleva una siepe di cespugli folti. A destra e a manca, sentieruoli erti e serpeggianti. — Tra l'edera, il muschio e le felci, la porticina d'un tugurio. Sopra la porticina, un largo buco a mo' di finestrella. Qua e là, rovi, ciuffi d'erbe selvatiche, tronchi d'alberi spezzati. Il cielo è azzurro. Nell'aria si diffonde una luce strana, lievissimamente rosea, con sfumature giallognole: è un'aria ingombra di vapori leggeri e leggermente colorati, la quale dà alla scena campestre un carattere fantastico. Si vede scintillare, lontano lontano, in alto, dove sono più densi i vapori, il dorato «Castello della fantasia».</em></p>
+      <p class="pnext"><em class="italics">(Alzatasi la tela, la scena è vuota. — Si sente il canto delle Disilluse portato dal vento. — Le parole, per fortuna dell'autore, quasi non si odono.)</em></p>
+      <div class="center line-block noindent outermost">
+        <div class="line">
+          <span class="invisible pageno target" title="312" id="page-312"></span><span class="small-caps">Le Fanciulle, tra cui Clea</span>
+        </div>
+      </div>
+      <p class="center pfirst"><em class="italics">(di dentro)</em></p>
+      <blockquote>
+        <div>
+          <div class="line-block outermost">
+            <div class="line">
+              È l'alma affranta,
+            </div>
+            <div class="inner line-block">
+              <div class="line">
+                è vuoto il core,
+              </div>
+              <div class="line">
+                la vita è infranta,
+              </div>
+              <div class="line">
+                il mondo muore.
+              </div>
+              <div class="line">
+                &nbsp;
+              </div>
+            </div>
+            <div class="line">
+              Qui di luce mesti incanti
+            </div>
+            <div class="inner line-block">
+              <div class="line">
+                noi viviamo circonfuse...,
+              </div>
+              <div class="line">
+                La natura par che canti:
+              </div>
+              <div class="line">
+                «Disilluse! disilluse!...»
+              </div>
+            </div>
+          </div>
+        </div>
+      </blockquote>
+      <p class="pfirst"><em class="italics">(Circondate d'una luminosa aureola, le Fanciulle, dagli abiti semplici, gentili, vaporosi e tinti di colori pallidi, dai capelli sciolti, ornati di fiori delicati, e dagli atteggiamenti di persone dolci, languide, annoiate e sospirose, si avanzano a poco a poco. — Clea è la loro conduttrice.)</em></p>
+      <blockquote>
+        <div>
+          <div class="line-block outermost">
+            <div class="line">
+              Venticello innamorato,
+            </div>
+            <div class="inner line-block">
+              <div class="line">
+                che d'intorno a noi ti aggiri,
+              </div>
+              <div class="line">
+                che ci avvolgi di sospiri
+              </div>
+              <div class="line">
+                e ci assedi da ogni lato,
+              </div>
+              <div class="line">
+                sappi ben che ci ami invano.
+              </div>
+              <div class="line">
+                L'amor nostro è morto a Zano!
+              </div>
+              <div class="line">
+                &nbsp;
+              </div>
+            </div>
+            <div class="line">
+              Venticello vagabondo,
+            </div>
+            <div class="inner line-block">
+              <div class="line">
+                tu che vedi, tu che senti
+              </div>
+              <div class="line">
+                tutti i nostri patimenti,
+              </div>
+              <div class="line">
+                va laggiù, va a dire al mondo
+              </div>
+              <div class="line">
+                che noi... gli uomini aboliamo...
+              </div>
+              <div class="line">
+                Non amiamo, non amiamo!
+              </div>
+            </div>
+          </div>
+        </div>
+      </blockquote>
+      <p class="pfirst"><em class="italics">(Si ode un lungo e dolce sbadiglio.)</em></p>
+      <blockquote>
+        <div>
+          <div class="line-block outermost">
+            <div class="line">
+              <span class="invisible pageno target" title="313" id="page-313"></span>
+            </div>
+            <div class="line">
+              Siam fanciulle... sbadiglianti...
+            </div>
+            <div class="inner line-block">
+              <div class="line">
+                d'aria e luce circonfuse....
+              </div>
+              <div class="line">
+                La natura par che canti:
+              </div>
+              <div class="line">
+                «Disilluse, disilluse....»
+              </div>
+            </div>
+          </div>
+        </div>
+      </blockquote>
+      <p class="pfirst"><em class="italics">(Continuano a cantare tutte, meno Clea, alla quale esse si rivolgono.)</em></p>
+      <blockquote>
+        <div>
+          <div class="line-block outermost">
+            <div class="line">
+              Ma un ricordo di note soavi
+            </div>
+            <div class="inner line-block">
+              <div class="line">
+                d'altri tempi si va risvegliando.
+              </div>
+              <div class="line">
+                Se tu, Clea, quelle note cantavi,
+              </div>
+              <div class="line">
+                ogni illusa cantava, sperando.
+              </div>
+              <div class="line">
+                &nbsp;
+              </div>
+            </div>
+            <div class="line">
+              Nel tuo core, bellissima Clea,
+            </div>
+            <div class="inner line-block">
+              <div class="line">
+                ravvivava quel canto la fè.
+              </div>
+              <div class="line">
+                Ti chiamavan di Zano la dea:
+              </div>
+              <div class="line">
+                la canzone era fatta per te.
+              </div>
+              <div class="line">
+                &nbsp;
+              </div>
+            </div>
+            <div class="line">
+              Deh! ripeti la canzone
+            </div>
+            <div class="inner line-block">
+              <div class="line">
+                della spenta illusione.
+              </div>
+            </div>
+          </div>
+        </div>
+      </blockquote>
+      <div class="center line-block noindent outermost">
+        <div class="line">
+          <span class="small-caps">Clea</span>
+        </div>
+      </div>
+      <blockquote>
+        <div>
+          <div class="line-block outermost">
+            <div class="line">
+              Il passato evocherò!
+            </div>
+          </div>
+        </div>
+      </blockquote>
+      <div class="center line-block noindent outermost">
+        <div class="line">
+          <span class="small-caps">Le Fanciulle</span>
+        </div>
+      </div>
+      <blockquote>
+        <div>
+          <div class="line-block outermost">
+            <div class="line">
+              Canta, canta...
+            </div>
+          </div>
+        </div>
+      </blockquote>
+      <div class="center line-block noindent outermost">
+        <div class="line">
+          <span class="small-caps">Clea</span>
+        </div>
+      </div>
+      <blockquote>
+        <div>
+          <div class="line-block outermost">
+            <div class="line">
+              Canterò.
+            </div>
+          </div>
+        </div>
+      </blockquote>
+      <p class="pfirst"><em class="italics">(ricordando e ripetendo l'antica canzone, con enfasi ridicola)</em></p>
+      <blockquote>
+        <div>
+          <div class="line-block outermost">
+            <div class="line">
+              «Sei nata nel giardino d'una fata
+            </div>
+            <div class="inner line-block">
+              <div class="line">
+                «che fuga col suo fascino il dolore.
+              </div>
+              <div class="line">
+                «Al sol de' suo' begli occhi tu sei nata,
+              </div>
+              <div class="line">
+                «giglio gentile, giglio incantatore.
+              </div>
+            </div>
+          </div>
+        </div>
+      </blockquote>
+      <blockquote>
+        <div>
+          <div class="line-block outermost">
+            <div class="line">
+              <span class="invisible pageno target" title="314" id="page-314"></span>«Sarà fecondo di pace infinita
+            </div>
+            <div class="inner line-block">
+              <div class="line">
+                «il lieto tuo fatidico candore.
+              </div>
+              <div class="line">
+                «Eternamente amata, la tua vita
+              </div>
+              <div class="line">
+                «sarà un connubio di pace e d'amore.»
+              </div>
+            </div>
+          </div>
+        </div>
+      </blockquote>
+      <p class="pfirst"><em class="italics">(interrompendosi.)</em></p>
+      <blockquote>
+        <div>
+          <div class="line-block outermost">
+            <div class="line">
+              Canzone menzognera!
+            </div>
+            <div class="inner line-block">
+              <div class="line">
+                Chi m'ama?... Chi mi amò?...
+              </div>
+              <div class="line">
+                Dov'è la pace vera?
+              </div>
+              <div class="line">
+                È pace questa?... No.
+              </div>
+              <div class="line">
+                E un'altra strofa, l'ultima,
+              </div>
+              <div class="line">
+                io voglio ricordar.
+              </div>
+              <div class="line">
+                Mentiva pure! Uditela,
+              </div>
+              <div class="line">
+                uditela cantar:
+              </div>
+              <div class="line">
+                &nbsp;
+              </div>
+            </div>
+            <div class="line">
+              «Sarai fanciulla bella innamorata
+            </div>
+            <div class="inner line-block">
+              <div class="line">
+                «d'un altro come te leggiadro fiore,
+              </div>
+              <div class="line">
+                «sbocciato nel giardin della tua fata
+              </div>
+              <div class="line">
+                «che fuga col suo fascino il dolore.»
+              </div>
+            </div>
+          </div>
+        </div>
+      </blockquote>
+      <p class="pfirst"><em class="italics">(Si abbandona sopra un sasso, presso il tugurio del romito, e vinta dalla noia, si assopisce.)</em></p>
+      <div class="center line-block noindent outermost">
+        <div class="line">
+          <span class="small-caps">Le Fanciulle</span>
+        </div>
+      </div>
+      <p class="pfirst"><em class="italics">(dopo la breve estasi di sollievo, ricascano nel triste languore.)</em></p>
+      <blockquote>
+        <div>
+          <div class="line-block outermost">
+            <div class="line">
+              È l'alma affranta,
+            </div>
+            <div class="inner line-block">
+              <div class="line">
+                è vuoto il cuore,
+              </div>
+              <div class="line">
+                la vita è infranta,
+              </div>
+              <div class="line">
+                il mondo muore.
+              </div>
+            </div>
+          </div>
+        </div>
+      </blockquote>
+      <p class="pfirst"><em class="italics">(Lentamente e mollemente, quasi mosse dal venticello, le Fanciulle a poco a poco si allontanano e spariscono.)</em></p>
+      <blockquote>
+        <div>
+          <div class="line-block outermost">
+            <div class="line">
+              <span class="invisible pageno target" title="315" id="page-315"></span>Siam fanciulle... sbadiglianti...
+            </div>
+            <div class="inner line-block">
+              <div class="line">
+                d'aria e luce circonfuse....
+              </div>
+              <div class="line">
+                La natura par che canti:
+              </div>
+              <div class="line">
+                «Disilluse! disilluse!...»
+              </div>
+            </div>
+          </div>
+        </div>
+      </blockquote>
+      <div class="center line-block noindent outermost">
+        <div class="line">
+          <span class="small-caps">Clea</span>
+        </div>
+      </div>
+      <p class="center pfirst"><em class="italics">(resta addormentata sul sasso.)</em></p>
+      <div class="center line-block noindent outermost">
+        <div class="line">
+          <span class="small-caps">Fleno</span>
+        </div>
+      </div>
+      <p class="pfirst"><em class="italics">(avvolto nel suo nero mantello, la testa quasi tutta nascosta nel cappuccio, la gran barba bianca fluente sul petto, esce dal tugurio. Vedendo Clea, mormora:)</em></p>
+      <p class="pnext">La conduttrice delle Disilluse dorme il sonno della noia.... Gesticola.... Sta sognando....</p>
+      <div class="center line-block noindent outermost">
+        <div class="line">
+          <span class="small-caps">Clea</span>
+        </div>
+      </div>
+      <p class="pfirst"><em class="italics">(in una specie di sonnambulismo, fa con la mano come se discacciasse un'ape.)</em></p>
+      <blockquote>
+        <div>
+          <div class="line-block outermost">
+            <div class="line">
+              Ape molesta
+            </div>
+            <div class="line">
+              va via di qua.
+            </div>
+          </div>
+        </div>
+      </blockquote>
+      <div class="center line-block noindent outermost">
+        <div class="line">
+          <span class="small-caps">Fleno</span>
+        </div>
+      </div>
+      <blockquote>
+        <div>
+          <div class="line-block outermost">
+            <div class="line">
+              Dorme e par desta.
+            </div>
+          </div>
+        </div>
+      </blockquote>
+      <div class="center line-block noindent outermost">
+        <div class="line">
+          <span class="small-caps">Clea</span>
+        </div>
+      </div>
+      <blockquote>
+        <div>
+          <div class="line-block outermost">
+            <div class="line">
+              Ah! se ne va.
+            </div>
+          </div>
+        </div>
+      </blockquote>
+      <div class="center line-block noindent outermost">
+        <div class="line">
+          <span class="small-caps">Fleno</span>
+        </div>
+      </div>
+      <blockquote>
+        <div>
+          <div class="line-block outermost">
+            <div class="line">
+              La bionda mesta
+            </div>
+            <div class="inner line-block">
+              <div class="line">
+                sognando sta.
+              </div>
+            </div>
+          </div>
+        </div>
+      </blockquote>
+      <div class="center line-block noindent outermost">
+        <div class="line">
+          <span class="invisible pageno target" title="316" id="page-316"></span><span class="small-caps">Clea</span>
+        </div>
+      </div>
+      <p class="pfirst"><em class="italics">(ricomincia a gesticolare, discacciando l'ape.)</em></p>
+      <blockquote>
+        <div>
+          <div class="line-block outermost">
+            <div class="line">
+              Di nuovo qui giunge....
+            </div>
+            <div class="inner line-block">
+              <div class="line">
+                e torna su me.
+              </div>
+              <div class="line">
+                Quest'ape mi punge,
+              </div>
+              <div class="line">
+                mi punge.... Perchè?
+              </div>
+            </div>
+          </div>
+        </div>
+      </blockquote>
+      <div class="center line-block noindent outermost">
+        <div class="line">
+          <span class="small-caps">Fleno</span>
+        </div>
+      </div>
+      <p class="pfirst"><em class="italics">(le si accosta, per liberarla dall'insetto importuno.)</em></p>
+      <blockquote>
+        <div>
+          <div class="line-block outermost">
+            <div class="line">
+              D'un'ape ella parla
+            </div>
+            <div class="inner line-block">
+              <div class="line">
+                e l'ape non c'è.
+              </div>
+              <div class="line">
+                Ma, intanto, sognarla!...
+              </div>
+              <div class="line">
+                Sognarla!... Perchè?
+              </div>
+            </div>
+          </div>
+        </div>
+      </blockquote>
+      <p class="center pfirst"><em class="italics">(Vedendo che ella si desta.)</em></p>
+      <blockquote>
+        <div>
+          <div class="line-block outermost">
+            <div class="line">
+              Si sveglia.... Si sveglia....
+            </div>
+          </div>
+        </div>
+      </blockquote>
+      <div class="center line-block noindent outermost">
+        <div class="line">
+          <span class="small-caps">Clea</span>
+        </div>
+      </div>
+      <p class="center pfirst"><em class="italics">(aprendo gli occhi.)</em></p>
+      <blockquote>
+        <div>
+          <div class="line-block outermost">
+            <div class="line">
+              Sei tu!
+            </div>
+          </div>
+        </div>
+      </blockquote>
+      <div class="center line-block noindent outermost">
+        <div class="line">
+          <span class="small-caps">Fleno</span>
+        </div>
+      </div>
+      <blockquote>
+        <div>
+          <div class="line-block outermost">
+            <div class="line">
+              Sì....
+            </div>
+          </div>
+        </div>
+      </blockquote>
+      <div class="center line-block noindent outermost">
+        <div class="line">
+          <span class="small-caps">Clea</span>
+        </div>
+      </div>
+      <blockquote>
+        <div>
+          <div class="line-block outermost">
+            <div class="line">
+              Che fai?
+            </div>
+          </div>
+        </div>
+      </blockquote>
+      <div class="center line-block noindent outermost">
+        <div class="line">
+          <span class="invisible pageno target" title="317" id="page-317"></span><span class="small-caps">Fleno</span>
+        </div>
+      </div>
+      <blockquote>
+        <div>
+          <div class="line-block outermost">
+            <div class="line">
+              Chi dorme... e chi veglia....
+            </div>
+          </div>
+        </div>
+      </blockquote>
+      <div class="center line-block noindent outermost">
+        <div class="line">
+          <span class="small-caps">Clea</span>
+        </div>
+      </div>
+      <blockquote>
+        <div>
+          <div class="line-block outermost">
+            <div class="line">
+              M'hai punta?...
+            </div>
+          </div>
+        </div>
+      </blockquote>
+      <div class="center line-block noindent outermost">
+        <div class="line">
+          <span class="small-caps">Fleno</span>
+        </div>
+      </div>
+      <blockquote>
+        <div>
+          <div class="line-block outermost">
+            <div class="inner line-block">
+              <div class="line">
+                No!... Mai!
+              </div>
+            </div>
+            <div class="line">
+              Non c'era l'ape; nemmen c'ero io.
+            </div>
+            <div class="line">
+              Chi ti pungeva davver non so.
+            </div>
+            <div class="line">
+              .... Pungeva forse qualche desio
+            </div>
+            <div class="line">
+              che viene in sogno... ma in veglia no.
+            </div>
+          </div>
+        </div>
+      </blockquote>
+      <div class="center line-block noindent outermost">
+        <div class="line">
+          <span class="small-caps">Clea</span>
+        </div>
+      </div>
+      <blockquote>
+        <div>
+          <div class="line-block outermost">
+            <div class="line">
+              Non indagare nel sogno mio....
+            </div>
+            <div class="line">
+              Chi mi pungeva davver non so.
+            </div>
+            <div class="line">
+              Pungeva forse qualche desio
+            </div>
+            <div class="line">
+              che viene in sogno... ma in veglia no.
+            </div>
+          </div>
+        </div>
+      </blockquote>
+      <p class="center pfirst"><em class="italics">(andandosene)</em></p>
+      <blockquote>
+        <div>
+          <div class="line-block outermost">
+            <div class="line">
+              A rivederci.... Buon vecchio, addio!
+            </div>
+            <div class="line">
+              Le Disilluse raggiunger vo'....
+            </div>
+          </div>
+        </div>
+      </blockquote>
+      <div class="center line-block noindent outermost">
+        <div class="line">
+          <span class="small-caps">Fleno</span>
+        </div>
+      </div>
+      <p class="center pfirst"><em class="italics">(con insinuante furberia)</em></p>
+      <blockquote>
+        <div>
+          <div class="line-block outermost">
+            <div class="line">
+              A rivederci... Pensa al desio....
+            </div>
+            <div class="line">
+              che punge in sogno, ma in veglia no.
+            </div>
+          </div>
+        </div>
+      </blockquote>
+      <div class="center line-block noindent outermost">
+        <div class="line">
+          <span class="small-caps">Clea</span>
+        </div>
+      </div>
+      <p class="center pfirst"><em class="italics">(va via.)</em></p>
+      <div class="center line-block noindent outermost">
+        <div class="line">
+          <span class="invisible pageno target" title="318" id="page-318"></span><span class="small-caps">Fleno</span>
+        </div>
+        <div class="line">
+          &nbsp;
+        </div>
+        <div class="line">
+          <em class="italics">(seguendo con lo sguardo Clea, e scotendo la testa:)</em>
+        </div>
+      </div>
+      <p class="pfirst">Va a raggiungere le Disilluse!... Ingenue! La loro disillusione è la più grande delle illusioni! Esse credono d'aver sofferto assai, appunto perchè non sanno che cosa sia soffrire. Se avessero provata una sola delle sventure toccate a me!...</p>
+      <div class="center line-block noindent outermost">
+        <div class="line">
+          <span class="italics">(Rivolgendosi al pubblico)</span>
+        </div>
+      </div>
+      <p class="pfirst">Io sono l'ex re di Zano: un regno senza impicci, un regno piccolo piccolo, un regno tascabile.... Ed io, infatti, avevo in tasca il mio regno e i miei sudditi; — ma ora sono essi che hanno in tasca me! Ah! Quando ricordo il giorno della rivolta, mi rivengono i brividi! Che batoste, e che paura!... Io me la svignai travestito da vecchio; e in questa.... vecchiezza continuo a nascondermi, perchè <em class="italics">(accennando, col gesto, alle probabili busse)</em> la prudenza non è mai troppa!...</p>
+      <blockquote>
+        <div>
+          <div class="line-block outermost">
+            <div class="line">
+              Quel giorno, che catastrofe!
+            </div>
+            <div class="inner line-block">
+              <div class="line">
+                Ed io, mutando viso
+              </div>
+              <div class="line">
+                per non morire ucciso,
+              </div>
+              <div class="line">
+                fuggii... Fuggii sin qui!
+              </div>
+              <div class="line">
+                &nbsp;
+              </div>
+            </div>
+            <div class="line">
+              Romito, in un tugurio
+            </div>
+            <div class="inner line-block">
+              <div class="line">
+                sinistramente muto,
+              </div>
+              <div class="line">
+                al regno che ho perduto
+              </div>
+              <div class="line">
+                penso la notte e il dì.
+              </div>
+              <div class="line">
+                &nbsp;
+              </div>
+            </div>
+            <div class="line">
+              Ah! come le memorie
+            </div>
+            <div class="inner line-block">
+              <div class="line">
+                mi danzano d'intorno
+              </div>
+              <div class="line">
+                e tornano ogni giorno
+              </div>
+              <div class="line">
+                a dir: «tu fosti re!»
+              </div>
+            </div>
+          </div>
+        </div>
+      </blockquote>
+      <blockquote>
+        <div>
+          <div class="line-block outermost">
+            <div class="line">
+              <span class="invisible pageno target" title="319" id="page-319"></span>Mi pesa questa maschera
+            </div>
+            <div class="inner line-block">
+              <div class="line">
+                d'umile vecchio inetto,
+              </div>
+              <div class="line">
+                ribellasi nel petto
+              </div>
+              <div class="line">
+                il giovanile ardor.
+              </div>
+              <div class="line">
+                &nbsp;
+              </div>
+            </div>
+            <div class="line">
+              Son di me stesso, misero,
+            </div>
+            <div class="inner line-block">
+              <div class="line">
+                la tetra sepoltura....
+              </div>
+              <div class="line">
+                Son morto addirittura...
+              </div>
+              <div class="line">
+                ahimè!, vivendo ancor.
+              </div>
+              <div class="line">
+                &nbsp;
+              </div>
+            </div>
+            <div class="line">
+              E le memorie danzano
+            </div>
+            <div class="inner line-block">
+              <div class="line">
+                intorno a questo morto,
+              </div>
+              <div class="line">
+                che non è ancor risorto...
+              </div>
+              <div class="line">
+                che morto ancor non è.
+              </div>
+            </div>
+          </div>
+        </div>
+      </blockquote>
+      <p class="pfirst"><em class="italics">(Rattristato, rientra nel suo tugurio, e si rincantuccia sotto l'arco della porta.)</em></p>
+      <div class="center line-block noindent outermost">
+        <div class="line">
+          <span class="small-caps">Voci misteriose</span>
+        </div>
+      </div>
+      <blockquote>
+        <div>
+          <div class="line-block outermost">
+            <div class="line">
+              Avanti, Arunto,
+            </div>
+            <div class="inner line-block">
+              <div class="line">
+                non ti stancar.
+              </div>
+              <div class="line">
+                Se non se' giunto,
+              </div>
+              <div class="line">
+                non ti fermar.
+              </div>
+              <div class="line">
+                &nbsp;
+              </div>
+            </div>
+            <div class="line">
+              La terra è immensa....
+            </div>
+            <div class="inner line-block">
+              <div class="line">
+                Sembra piccina....
+              </div>
+              <div class="line">
+                Cammina e pensa,
+              </div>
+              <div class="line">
+                pensa e cammina.
+              </div>
+            </div>
+          </div>
+        </div>
+      </blockquote>
+      <p class="pfirst"><em class="italics">(Arunto comparisce nel suo abito smagliante, con in mano una borsetta da viaggio, e le voci misteriose continuano:)</em></p>
+      <blockquote>
+        <div>
+          <div class="line-block outermost">
+            <div class="line">
+              Coraggio, Arunto,
+            </div>
+            <div class="inner line-block">
+              <div class="line">
+                non disperar.
+              </div>
+              <div class="line">
+                Se non se' giunto
+              </div>
+              <div class="line">
+                non ti fermar.
+              </div>
+            </div>
+          </div>
+        </div>
+      </blockquote>
+      <blockquote>
+        <div>
+          <div class="line-block outermost">
+            <div class="line">
+              <span class="invisible pageno target" title="320" id="page-320"></span>Per chi dispera
+            </div>
+            <div class="inner line-block">
+              <div class="line">
+                tutto è rovina.
+              </div>
+              <div class="line">
+                Cammina e spera,
+              </div>
+              <div class="line">
+                spera e cammina!
+              </div>
+            </div>
+          </div>
+        </div>
+      </blockquote>
+      <div class="center line-block noindent outermost">
+        <div class="line">
+          <span class="small-caps">Arunto</span>
+        </div>
+      </div>
+      <p class="center pfirst"><em class="italics">(stanco, scoraggiato, guardandosi attorno)</em></p>
+      <blockquote>
+        <div>
+          <div class="line-block outermost">
+            <div class="line">
+              Cessate, o voci arcane! Ahimè, dal petto
+            </div>
+            <div class="inner line-block">
+              <div class="line">
+                ogni speranza già fuggir mi sento.
+              </div>
+              <div class="line">
+                A interrogare il cielo io sono intento,
+              </div>
+              <div class="line">
+                ma un lieto auspicio inutilmente aspetto.
+              </div>
+              <div class="line">
+                &nbsp;
+              </div>
+            </div>
+            <div class="line">
+              O tu, di gloria bel sogno dolcissimo,
+            </div>
+            <div class="inner line-block">
+              <div class="inner line-block">
+                <div class="line">
+                  vanisci a poco a poco:
+                </div>
+              </div>
+            </div>
+            <div class="line">
+              e dell'antica mia perduta audacia
+            </div>
+            <div class="inner line-block">
+              <div class="inner line-block">
+                <div class="line">
+                  ora il ritorno invoco.
+                </div>
+                <div class="line">
+                  &nbsp;
+                </div>
+              </div>
+            </div>
+            <div class="line">
+              Misteriosi e lieti m'accompagnano,
+            </div>
+            <div class="inner line-block">
+              <div class="line">
+                nel mio cammin fatale, questi canti;
+              </div>
+              <div class="line">
+                e i monti, i fiumi, gli alberi mi dicono:
+              </div>
+              <div class="line">
+                «Coraggio Arunto! Avanti, avanti, avanti!»
+              </div>
+              <div class="line">
+                &nbsp;
+              </div>
+            </div>
+            <div class="line">
+              Ma tu, di gloria mio sogno dolcissimo,
+            </div>
+            <div class="inner line-block">
+              <div class="inner line-block">
+                <div class="line">
+                  vanisci a poco a poco;
+                </div>
+              </div>
+            </div>
+            <div class="line">
+              e invano della mia perduta audacia
+            </div>
+            <div class="inner line-block">
+              <div class="inner line-block">
+                <div class="line">
+                  ora il ritorno invoco.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </blockquote>
+      <div class="center line-block noindent outermost">
+        <div class="line">
+          <span class="small-caps">Fleno</span>
+        </div>
+        <div class="line">
+          &nbsp;
+        </div>
+        <div class="line">
+          <em class="italics">(scotendosi)</em>
+        </div>
+      </div>
+      <p class="pfirst">La pace sia con te!</p>
+      <div class="center line-block noindent outermost">
+        <div class="line">
+          <span class="small-caps">Arunto</span>
+        </div>
+        <div class="line">
+          &nbsp;
+        </div>
+        <div class="line">
+          <em class="italics">(accorgendosi del romito)</em>
+        </div>
+      </div>
+      <p class="pnext"><span class="invisible pageno target" title="321" id="page-321"></span>Oh! Credevo d'essere solo.</p>
+      <div class="center line-block noindent outermost">
+        <div class="line">
+          <span class="small-caps">Fleno</span>
+        </div>
+      </div>
+      <p class="pfirst">E sei solo, difatti.</p>
+      <div class="center line-block noindent outermost">
+        <div class="line">
+          <span class="small-caps">Arunto</span>
+        </div>
+      </div>
+      <p class="pfirst">E tu?</p>
+      <div class="center line-block noindent outermost">
+        <div class="line">
+          <span class="small-caps">Fleno</span>
+        </div>
+      </div>
+      <p class="pfirst">Io mi chiamo: Nessuno!</p>
+      <div class="center line-block noindent outermost">
+        <div class="line">
+          <span class="small-caps">Arunto</span>
+        </div>
+      </div>
+      <p class="pfirst">Chi t'ha dato questo nome?</p>
+      <div class="center line-block noindent outermost">
+        <div class="line">
+          <span class="small-caps">Fleno</span>
+        </div>
+      </div>
+      <p class="pfirst">La sventura.</p>
+      <div class="center line-block noindent outermost">
+        <div class="line">
+          <span class="small-caps">Arunto</span>
+        </div>
+      </div>
+      <p class="pfirst">Poveretto!</p>
+      <div class="center line-block noindent outermost">
+        <div class="line">
+          <span class="small-caps">Fleno</span>
+        </div>
+      </div>
+      <p class="pfirst">Anche tu mi sembri una persona non molto allegra. Devi avere più d'un diavolo per capello.... Che vuoi? Dove vai? Donde vieni? Chi sei?</p>
+      <div class="center line-block noindent outermost">
+        <div class="line">
+          <span class="small-caps">Arunto</span>
+        </div>
+      </div>
+      <p class="pfirst">Io sono Arunto. Vengo da Zano....</p>
+      <div class="center line-block noindent outermost">
+        <div class="line">
+          <span class="small-caps">Fleno</span>
+        </div>
+      </div>
+      <p class="center pfirst"><em class="italics">(sussulta.)</em></p>
+      <div class="center line-block noindent outermost">
+        <div class="line">
+          <span class="invisible pageno target" title="322" id="page-322"></span><span class="small-caps">Arunto</span>
+        </div>
+      </div>
+      <p class="pfirst">Vado... non so dove. E voglio... undici fanciulle. Non ti sorprendere.... L'impresa mia è più nobile di quanto, per avventura, tu immagini. Il popolo di Zano mi ha incaricato di ricondurre in patria le undici fanciulle, le più belle del regno, che, disilluse della vita, volarono via, emigrando dalla terra nativa.</p>
+      <div class="center line-block noindent outermost">
+        <div class="line">
+          <span class="small-caps">Fleno</span>
+        </div>
+        <div class="line">
+          &nbsp;
+        </div>
+        <div class="line">
+          <em class="italics">(con ansia repressa)</em>
+        </div>
+      </div>
+      <p class="pfirst">Ah? Il popolo di Zano ti ha dato codesto incarico? E raccontami, raccontami: che si fa laggiù? Come se la passano quei bravi rivoltosi?</p>
+      <div class="center line-block noindent outermost">
+        <div class="line">
+          <span class="small-caps">Arunto</span>
+        </div>
+      </div>
+      <p class="pfirst">Rivoltosi! E come sai...?</p>
+      <div class="center line-block noindent outermost">
+        <div class="line">
+          <span class="small-caps">Fleno</span>
+        </div>
+      </div>
+      <div class="center line-block noindent outermost">
+        <div class="line">
+          <span class="italics">(confondendosi un po')</span>
+        </div>
+      </div>
+      <p class="pfirst">.... Qualche volta il vento pettegolo viene a susurrarmi all'orecchio le notizie dei paesi lontani.... <em class="italics">(Tra sè)</em> Che sia un mandatario dei miei nemici? <em class="italics">(Ad Arunto, con dissimulazione)</em> Non conosco Zano che di nome. È un vasto regno?</p>
+      <div class="center line-block noindent outermost">
+        <div class="line">
+          <span class="small-caps">Arunto</span>
+        </div>
+      </div>
+      <p class="pfirst">Non se ne vedono i confini.... C'è sempre la nebbia.</p>
+      <div class="center line-block noindent outermost">
+        <div class="line">
+          <span class="invisible pageno target" title="323" id="page-323"></span><span class="small-caps">Fleno</span>
+        </div>
+      </div>
+      <p class="pfirst">E che fanno i partiti politici?</p>
+      <div class="center line-block noindent outermost">
+        <div class="line">
+          <span class="small-caps">Arunto</span>
+        </div>
+      </div>
+      <p class="pfirst">Ognuno fa quello che l'altro non fa.</p>
+      <div class="center line-block noindent outermost">
+        <div class="line">
+          <span class="small-caps">Fleno</span>
+        </div>
+      </div>
+      <p class="pfirst">E chi siederà sul trono?</p>
+      <div class="center line-block noindent outermost">
+        <div class="line">
+          <span class="small-caps">Arunto</span>
+        </div>
+      </div>
+      <p class="pfirst">Chi lo porterà sulle spalle.</p>
+      <div class="center line-block noindent outermost">
+        <div class="line">
+          <span class="small-caps">Fleno</span>
+        </div>
+      </div>
+      <p class="pfirst">Parli come una sibilla. Non vuoi dirmi la verità?</p>
+      <div class="center line-block noindent outermost">
+        <div class="line">
+          <span class="small-caps">Arunto</span>
+        </div>
+        <div class="line">
+          &nbsp;
+        </div>
+        <div class="line">
+          <em class="italics">(con prudenza)</em>
+        </div>
+      </div>
+      <p class="pfirst">Per ora il popolo non chiede che le fanciulle fuggitive. Un re c'è sempre tempo di eleggerlo o di fabbricarlo. Ma la bellezza di undici fanciulle non si fabbrica e non si elegge.</p>
+      <div class="center line-block noindent outermost">
+        <div class="line">
+          <span class="small-caps">Fleno</span>
+        </div>
+      </div>
+      <p class="pfirst">Ti preme molto il trovarle?</p>
+      <div class="center line-block noindent outermost">
+        <div class="line">
+          <span class="invisible pageno target" title="324" id="page-324"></span><span class="small-caps">Arunto</span>
+        </div>
+      </div>
+      <p class="pfirst">Non lo vedi? Passo di paese in paese, m'inoltro in terre sconosciute, non riposo mai.... <em class="italics">(Desolato)</em> E non le trovo!...</p>
+      <div class="center line-block noindent outermost">
+        <div class="line">
+          <span class="small-caps">Fleno</span>
+        </div>
+      </div>
+      <p class="pfirst">Sono undici, hai detto? Sono belle? Sono disilluse della vita? Ebbene, tu non sei lontano da loro.</p>
+      <div class="center line-block noindent outermost">
+        <div class="line">
+          <span class="small-caps">Arunto</span>
+        </div>
+        <div class="line">
+          &nbsp;
+        </div>
+        <div class="line">
+          <em class="italics">(con viva gioia)</em>
+        </div>
+      </div>
+      <p class="pfirst">Che!?</p>
+      <div class="center line-block noindent outermost">
+        <div class="line">
+          <span class="small-caps">Fleno</span>
+        </div>
+      </div>
+      <p class="pfirst">Vedi tu quell'aureo castello che scintilla nell'atmosfera vaporosa?</p>
+      <div class="center line-block noindent outermost">
+        <div class="line">
+          <span class="small-caps">Arunto</span>
+        </div>
+      </div>
+      <p class="pfirst">Lo vedo.</p>
+      <div class="center line-block noindent outermost">
+        <div class="line">
+          <span class="small-caps">Fleno</span>
+        </div>
+      </div>
+      <p class="pfirst">È la dimora delle Disilluse: è il castello della Fantasia. Quando qui giunsero volando sulle ali della disillusione, si posarono lassù. Costruirono un nido di raggi di sole, e il nido, forte della invulnerabile castità delle candide abitatrici, fu ben presto solido e inespugnabile come una rocca e prezioso come un immenso ninnolo d'oro. In quel castello, che la loro immaginazione ha creato, esse, le candide abitatrici, vivono d'aria, di luce e di <span class="invisible pageno target" title="325" id="page-325"></span>malinconia; e, tutte assorte nella loro profonda disillusione, menano una vita dolcissima... e si annoiano mortalmente.</p>
+      <div class="center line-block noindent outermost">
+        <div class="line">
+          <span class="small-caps">Arunto</span>
+        </div>
+      </div>
+      <p class="pfirst"><em class="italics">(giubilante)</em> Io so tutto ciò che mi basta.... Vado, corro subito.... Mi getterò subito ai loro piedi....</p>
+      <div class="center line-block noindent outermost">
+        <div class="line">
+          <span class="small-caps">Fleno</span>
+        </div>
+      </div>
+      <p class="pfirst">Non tanta foga, giovanotto mio! Sulla porta di quel castello è scritto: <em class="italics">Abbasso gli uomini!</em> Piuttosto, io ti consiglierei di aspettare qui. Spesso dal loro nido vengono fuori, e volano, volano, girovagando tra i ruscelli, gli alberi, i fiori, e spesso qui si fermano riempiendo l'aria dei lor lai melodiosi.</p>
+      <div class="center line-block noindent outermost">
+        <div class="line">
+          <span class="small-caps">Arunto</span>
+        </div>
+      </div>
+      <p class="pfirst">Benissimo! Benissimo!</p>
+      <div class="center line-block noindent outermost">
+        <div class="line">
+          <span class="small-caps">Fleno</span>
+        </div>
+      </div>
+      <p class="pfirst">Non tanta foga, giovanotto mio! Hai da sapere ch'esse fuggono e riparano nel loro castello al solo sospetto di un giovine viso maschile. E sarebbero anche capaci di dileguarsi se il giovine viso maschile si ostinasse a seguirle.</p>
+      <div class="center line-block noindent outermost">
+        <div class="line">
+          <span class="small-caps">Arunto</span>
+        </div>
+      </div>
+      <p class="pfirst">Dileguarsi? Come se fossero nuvole?!</p>
+      <div class="center line-block noindent outermost">
+        <div class="line">
+          <span class="invisible pageno target" title="326" id="page-326"></span><span class="small-caps">Fleno</span>
+        </div>
+      </div>
+      <p class="pfirst">Difatti, talvolta i loro occhi lampeggiano..., tal altra si sciolgono in pioggia... di lagrime.</p>
+      <div class="center line-block noindent outermost">
+        <div class="line">
+          <span class="small-caps">Arunto</span>
+        </div>
+        <div class="line">
+          &nbsp;
+        </div>
+        <div class="line">
+          <em class="italics">(di nuovo consolato)</em>
+        </div>
+      </div>
+      <p class="pfirst">Sicchè, è inutile aspettarle, è inutile sperare.... Ma tu, le conosci?</p>
+      <div class="center line-block noindent outermost">
+        <div class="line">
+          <span class="small-caps">Fleno</span>
+        </div>
+      </div>
+      <p class="pfirst">Sì, a me queste farfalle latitanti concedono qualche minuto della loro presenza e della loro conversazione, perchè io, capisci?, essendo vecchio decrepito, non arreco loro spavento.... Anzi, ispiro fiducia....</p>
+      <div class="center line-block noindent outermost">
+        <div class="line">
+          <span class="small-caps">Arunto</span>
+        </div>
+        <div class="line">
+          &nbsp;
+        </div>
+        <div class="line">
+          <em class="italics">(tra sè)</em>
+        </div>
+      </div>
+      <p class="pfirst">La chiama fiducia, lui. <em class="italics">(A Fleno)</em> Ah! buon vecchio, se potessi afferrarle, se potessi parlare con loro!...</p>
+      <div class="center line-block noindent outermost">
+        <div class="line">
+          <span class="small-caps">Fleno</span>
+        </div>
+      </div>
+      <p class="pfirst">Lo potrai fra una sessantina d'anni, cioè quando sarai vecchio come me.</p>
+      <div class="center line-block noindent outermost">
+        <div class="line">
+          <span class="small-caps">Arunto</span>
+        </div>
+        <div class="line">
+          &nbsp;
+        </div>
+        <div class="line">
+          <em class="italics">(disperandosi)</em>
+        </div>
+      </div>
+      <p class="pfirst">Ah, perchè mia madre non mi ha fatto nascere sessant'anni prima?!</p>
+      <div class="center line-block noindent outermost">
+        <div class="line">
+          <span class="invisible pageno target" title="327" id="page-327"></span><span class="small-caps">Fleno</span>
+        </div>
+      </div>
+      <p class="pfirst"><em class="italics">(commosso)</em> Senti.... Io ho il mezzo di farti diventar vecchio....</p>
+      <div class="center line-block noindent outermost">
+        <div class="line">
+          <span class="small-caps">Arunto</span>
+        </div>
+      </div>
+      <p class="pfirst">In che modo?</p>
+      <div class="center line-block noindent outermost">
+        <div class="line">
+          <span class="small-caps">Fleno</span>
+        </div>
+      </div>
+      <p class="pfirst">Non m'interrogare, e non indagare. Io entrerò nel mio tugurio. E, dall'alto di quel finestrino, ti porgerò la mia Vecchiezza. Bada però: dopo sbrigata la bisogna, tu, di nascosto, la mia Vecchiezza mi renderai. Io, intanto, per sottrarmi a ogni ricerca... — so quel che dico — ... chiuderò a chiave la porta del tugurio.</p>
+      <div class="center line-block noindent outermost">
+        <div class="line">
+          <span class="small-caps">Arunto</span>
+        </div>
+        <div class="line">
+          &nbsp;
+        </div>
+        <div class="line">
+          <em class="italics">(con effusione)</em>
+        </div>
+      </div>
+      <p class="pfirst">Oh! grazie! grazie! Tu sei il mio salvatore! Grazie!</p>
+      <div class="center line-block noindent outermost">
+        <div class="line">
+          <span class="small-caps">Fleno</span>
+        </div>
+      </div>
+      <p class="pfirst">Aspetta. <em class="italics">(Entra nel tugurio, chiude a chiave la porta, e, dopo qualche istante, ricompare dietro il finestrino col viso di giovane. Allungando un braccio, fa penzolare la finta barba bianca. E, poichè Arunto ha lo sguardo rivolto dalla parte opposta, egli, Fleno, lo chiama:)</em> Ehi!... pss! pss!...</p>
+      <div class="center line-block noindent outermost">
+        <div class="line">
+          <span class="invisible pageno target" title="328" id="page-328"></span><span class="small-caps">Arunto</span>
+        </div>
+      </div>
+      <p class="pfirst"><em class="italics">(si volta, si avvicina con meraviglia; e poi, quando Fleno gli consegna la barba, egli se l'appiccica alla faccia, assumendo la fisonomia di Fleno.)</em></p>
+      <div class="center line-block noindent outermost">
+        <div class="line">
+          <span class="small-caps">Fleno</span>
+        </div>
+      </div>
+      <blockquote>
+        <div>
+          <div class="line-block outermost">
+            <div class="line">
+              Ecco la barba della Vecchiezza
+            </div>
+            <div class="inner line-block">
+              <div class="line">
+                che cangia il viso, ma non l'età.
+              </div>
+              <div class="line">
+                Con questa barba la Giovinezza
+              </div>
+              <div class="line">
+                piglia un aspetto d'innocuità.
+              </div>
+            </div>
+          </div>
+        </div>
+      </blockquote>
+      <div class="center line-block noindent outermost">
+        <div class="line">
+          <span class="small-caps">Arunto</span>
+        </div>
+      </div>
+      <p class="center pfirst"><em class="italics">(mettendosi la barba)</em></p>
+      <blockquote>
+        <div>
+          <div class="line-block outermost">
+            <div class="line">
+              Di sotto il pelo bianco
+            </div>
+            <div class="inner line-block">
+              <div class="line">
+                io giovine sarò,
+              </div>
+              <div class="line">
+                chè nulla ho in me di stanco
+              </div>
+              <div class="line">
+                e vecchio il cor non ho.
+              </div>
+            </div>
+          </div>
+        </div>
+      </blockquote>
+      <div class="center line-block noindent outermost">
+        <div class="line">
+          <span class="small-caps">Fleno</span>
+        </div>
+      </div>
+      <p class="pfirst"><em class="italics">(dal finestrino, porgendo ad Arunto prima il mantello nero, poi il suo lungo bastone.)</em></p>
+      <blockquote>
+        <div>
+          <div class="line-block outermost">
+            <div class="line">
+              Ecco il mantello della Vecchiezza
+            </div>
+            <div class="inner line-block">
+              <div class="line">
+                che cela l'uomo dal capo a piè;
+              </div>
+              <div class="line">
+                ecco il bastone della stanchezza
+              </div>
+              <div class="line">
+                di chi nel cuore vecchio non è.
+              </div>
+            </div>
+          </div>
+        </div>
+      </blockquote>
+      <div class="center line-block noindent outermost">
+        <div class="line">
+          <span class="small-caps">Arunto</span>
+        </div>
+      </div>
+      <p class="center pfirst"><em class="italics">(mettendosi il mantello)</em></p>
+      <blockquote>
+        <div>
+          <div class="line-block outermost">
+            <div class="line">
+              Sotto il mantello nero
+            </div>
+            <div class="inner line-block">
+              <div class="line">
+                io mi nasconderò
+              </div>
+              <div class="line">
+                e sempre quello che ero
+              </div>
+              <div class="line">
+                e quel che son sarò.
+              </div>
+            </div>
+          </div>
+        </div>
+      </blockquote>
+      <div class="center line-block noindent outermost">
+        <div class="line">
+          <span class="invisible pageno target" title="329" id="page-329"></span><span class="small-caps">Fleno</span>
+        </div>
+      </div>
+      <blockquote>
+        <div>
+          <div class="line-block outermost">
+            <div class="line">
+              T'ho dato, credimi,
+            </div>
+            <div class="inner line-block">
+              <div class="line">
+                tutto me stesso....
+              </div>
+            </div>
+          </div>
+        </div>
+      </blockquote>
+      <div class="center line-block noindent outermost">
+        <div class="line">
+          <span class="small-caps">Arunto</span>
+        </div>
+      </div>
+      <blockquote>
+        <div>
+          <div class="line-block outermost">
+            <div class="line">
+              Te ne ringrazio!
+            </div>
+            <div class="inner line-block">
+              <div class="line">
+                Parla sommesso....
+              </div>
+            </div>
+          </div>
+        </div>
+      </blockquote>
+      <div class="center line-block noindent outermost">
+        <div class="line">
+          <span class="small-caps">Fleno</span>
+        </div>
+      </div>
+      <blockquote>
+        <div>
+          <div class="line-block outermost">
+            <div class="line">
+              D'essere innocuo
+            </div>
+            <div class="inner line-block">
+              <div class="line">
+                per poco io cesso.
+              </div>
+            </div>
+          </div>
+        </div>
+      </blockquote>
+      <div class="center line-block noindent outermost">
+        <div class="line">
+          <span class="small-caps">Arunto</span>
+        </div>
+      </div>
+      <blockquote>
+        <div>
+          <div class="line-block outermost">
+            <div class="line">
+              Vecchio decrepito
+            </div>
+            <div class="inner line-block">
+              <div class="line">
+                io sono adesso!
+              </div>
+            </div>
+          </div>
+        </div>
+      </blockquote>
+      <div class="center line-block noindent outermost">
+        <div class="line">
+          <span class="small-caps">Arunto</span>
+        </div>
+      </div>
+      <p class="center pfirst"><em class="italics">(tra sè)</em></p>
+      <blockquote>
+        <div>
+          <div class="line-block outermost">
+            <div class="line">
+              Di sotto il pelo bianco
+            </div>
+            <div class="inner line-block">
+              <div class="line">
+                io giovine sarò,
+              </div>
+              <div class="line">
+                chè nulla ho in me di stanco
+              </div>
+              <div class="line">
+                e vecchio il cor non ho.
+              </div>
+            </div>
+          </div>
+        </div>
+      </blockquote>
+      <div class="center line-block noindent outermost">
+        <div class="line">
+          <span class="small-caps">Fleno</span>
+        </div>
+      </div>
+      <p class="center pfirst"><em class="italics">(tra sè)</em></p>
+      <blockquote>
+        <div>
+          <div class="line-block outermost">
+            <div class="line">
+              Che l'apparenza inganni,
+            </div>
+            <div class="inner line-block">
+              <div class="line">
+                è antica verità.
+              </div>
+              <div class="line">
+                Ed egli, ne' miei panni,
+              </div>
+              <div class="line">
+                le ingenue ingannerà.
+              </div>
+            </div>
+          </div>
+        </div>
+      </blockquote>
+      <div class="center line-block noindent outermost">
+        <div class="line">
+          <span class="invisible pageno target" title="330" id="page-330"></span><span class="small-caps">Arunto</span>
+        </div>
+      </div>
+      <p class="pfirst"><em class="italics">(si mette a sedere, tutto raggomitolato, presso il tugurio, fingendo d'essere Fleno.)</em></p>
+      <div class="center line-block noindent outermost">
+        <div class="line">
+          <span class="small-caps">Le Fanciulle</span>
+        </div>
+      </div>
+      <p class="center pfirst"><em class="italics">(di dentro)</em></p>
+      <blockquote>
+        <div>
+          <div class="line-block outermost">
+            <div class="line">
+              È l'alma affranta,
+            </div>
+            <div class="inner line-block">
+              <div class="line">
+                è vuoto il cuore,
+              </div>
+              <div class="line">
+                la vita è infranta,
+              </div>
+              <div class="line">
+                il mondo muore.
+              </div>
+            </div>
+          </div>
+        </div>
+      </blockquote>
+      <p class="pfirst"><em class="italics">(Si avanzano con la solita lentezza, nel solito atteggiamento di languore.)</em></p>
+      <div class="center line-block noindent outermost">
+        <div class="line">
+          <span class="small-caps">Voci misteriose</span>
+        </div>
+      </div>
+      <blockquote>
+        <div>
+          <div class="line-block outermost">
+            <div class="line">
+              Coraggio, Arunto,
+            </div>
+            <div class="inner line-block">
+              <div class="line">
+                non disperare.
+              </div>
+              <div class="line">
+                Se non sei giunto
+              </div>
+              <div class="line">
+                non ti fermare.
+              </div>
+              <div class="line">
+                &nbsp;
+              </div>
+            </div>
+            <div class="line">
+              Per chi dispera
+            </div>
+            <div class="inner line-block">
+              <div class="line">
+                tutto è rovina!
+              </div>
+              <div class="line">
+                Cammina e spera,
+              </div>
+              <div class="line">
+                spera e cammina.
+              </div>
+            </div>
+          </div>
+        </div>
+      </blockquote>
+      <div class="center line-block noindent outermost">
+        <div class="line">
+          <span class="small-caps">Arunto</span>
+        </div>
+      </div>
+      <p class="pfirst"><em class="italics">(sentendo il canto delle Disilluse e vedendole venire)</em></p>
+      <p class="pnext">Ah! eccole.... <em class="italics">(Dopo una pausa, parla alle Fanciulle, imitando la voce di Fleno)</em> La pace sia con voi!</p>
+      <div class="center line-block noindent outermost">
+        <div class="line">
+          <span class="invisible pageno target" title="331" id="page-331"></span><span class="small-caps">Clea</span>
+        </div>
+      </div>
+      <p class="pfirst">Grazie, buon vecchio. La pace è con noi.</p>
+      <div class="center line-block noindent outermost">
+        <div class="line">
+          <span class="small-caps">Arunto</span>
+        </div>
+        <div class="line">
+          &nbsp;
+        </div>
+        <div class="line">
+          <em class="italics">(tra sè, guardandola di sottecchi)</em>
+        </div>
+      </div>
+      <p class="pfirst">Che splendida creatura!</p>
+      <div class="center line-block noindent outermost">
+        <div class="line">
+          <span class="small-caps">Clea</span>
+        </div>
+      </div>
+      <p class="pfirst">Mi sembri inquieto. Che fai?</p>
+      <div class="center line-block noindent outermost">
+        <div class="line">
+          <span class="small-caps">Arunto</span>
+        </div>
+      </div>
+      <p class="pfirst">La figura di uno stranissimo mago m'è apparsa or ora. M'ha parlato di voi, ed è sparito.</p>
+      <div class="center line-block noindent outermost">
+        <div class="line">
+          <span class="small-caps">Clea</span>
+        </div>
+        <div class="line">
+          &nbsp;
+        </div>
+        <div class="line">
+          <em class="italics">(mal frenando la curiosità)</em>
+        </div>
+      </div>
+      <p class="pfirst">E che t'ha detto?</p>
+      <div class="center line-block noindent outermost">
+        <div class="line">
+          <span class="small-caps">Arunto</span>
+        </div>
+      </div>
+      <p class="pfirst">M'ha data questa borsa <em class="italics">(mostrandola)</em>, dicendo che contiene dei doni per tutte voi. E io gli ho promesso di consegnarveli: non ho saputo dir di no....</p>
+      <div class="center line-block noindent outermost">
+        <div class="line">
+          <span class="small-caps">Clea</span>
+        </div>
+      </div>
+      <p class="pfirst">Dei doni!...</p>
+      <div class="center line-block noindent outermost">
+        <div class="line">
+          <span class="invisible pageno target" title="332" id="page-332"></span><span class="small-caps">Le altre Fanciulle</span>
+        </div>
+      </div>
+      <p class="pfirst">Dei doni!...</p>
+      <div class="center line-block noindent outermost">
+        <div class="line">
+          <span class="small-caps">Clea e le Fanciulle</span>
+        </div>
+      </div>
+      <p class="pfirst">E che saranno? Che saranno?...</p>
+      <div class="center line-block noindent outermost">
+        <div class="line">
+          <span class="small-caps">Arunto</span>
+        </div>
+      </div>
+      <p class="pfirst">Chi sa! A vederli, sono degli involtini eleganti.... Conterranno qualche... qualche gingillo, qualche sorpresa. Potrebbero essere dei pegni d'affetto, per esempio, come quelli che si offrono... in occasione delle promesse di nozze....</p>
+      <div class="center line-block noindent outermost">
+        <div class="line">
+          <span class="small-caps">Clea e le Fanciulle</span>
+        </div>
+        <div class="line">
+          &nbsp;
+        </div>
+        <div class="line">
+          <em class="italics">(tumultuando)</em>
+        </div>
+      </div>
+      <p class="pfirst">Nozze?!... Mai! Mai! Mai!</p>
+      <div class="center line-block noindent outermost">
+        <div class="line">
+          <span class="small-caps">Arunto</span>
+        </div>
+      </div>
+      <p class="pfirst">Non vi spaventate.... Ho voluto sperimentarvi. Il mago m'ha detto... che soltanto le fanciulle irremovibili nel loro proposito sarebbero degne del suo dono. Sicchè, ora che sono sicuro delle vostre intenzioni, posso adempiere il mio compito.</p>
+      <div class="center line-block noindent outermost">
+        <div class="line">
+          <span class="small-caps">Clea e le Fanciulle</span>
+        </div>
+        <div class="line">
+          &nbsp;
+        </div>
+        <div class="line">
+          <em class="italics">(ansiose)</em>
+        </div>
+      </div>
+      <p class="pfirst">Date... date qua... date qua... date qua....</p>
+      <div class="center line-block noindent outermost" id="borsa">
+        <div class="line">
+          <span class="invisible pageno target" title="333" id="page-333"></span><span class="small-caps">Arunto</span>
+        </div>
+        <div class="line">
+          &nbsp;
+        </div>
+        <div class="line">
+          <em class="italics">(aprendo la borsa, tra sè)</em>
+        </div>
+      </div>
+      <p class="pfirst">Alla mia divina interlocutrice non glielo do, perchè a lei spero di provvedere... personalmente. <em class="italics">(Rivolgendosi alle Fanciulle e distribuendo gl'involti)</em> A voi.... A voi.... A voi.... A voi.... A voi....</p>
+      <div class="center line-block noindent outermost">
+        <div class="line">
+          <span class="small-caps">Clea</span>
+        </div>
+      </div>
+      <p class="pfirst"><em class="italics">(quando è finita la distribuzione, è assai scontenta di non aver ricevuto niente, e resta imbronciata, quasi con le lagrime.)</em></p>
+      <div class="center line-block noindent outermost">
+        <div class="line">
+          <span class="small-caps">Arunto</span>
+        </div>
+      </div>
+      <p class="pfirst"><em class="italics">(osserva e finge)</em> Oh! Ne ho perduto uno!... <em class="italics">(A Clea)</em> Sono dolentissimo, ma....</p>
+      <div class="center line-block noindent outermost">
+        <div class="line">
+          <span class="small-caps">Le Fanciulle</span>
+        </div>
+      </div>
+      <p class="pfirst"><em class="italics">(dopo avere disfatto l'involtino, guardano con meraviglia e con gioia mal celata ciò che vi hanno trovato dentro: cioè un ritratto e una lettera.)</em> <em class="italics">(Esclamano:)</em> Un ritratto! <em class="italics">(Poi, entusiasmandosi)</em> Il ritratto d'un giovane!...</p>
+      <div class="center line-block noindent outermost">
+        <div class="line">
+          <span class="small-caps">Arunto</span>
+        </div>
+      </div>
+      <p class="pfirst">E lì..., che cos'è scritto? Leggete!</p>
+      <div class="center line-block noindent outermost">
+        <div class="line">
+          <span class="invisible pageno target" title="334" id="page-334"></span><span class="small-caps">Le Fanciulle</span>
+        </div>
+      </div>
+      <p class="pfirst"><em class="italics">(con crescente entusiasmo)</em> Una lettera!... <em class="italics">(L'aprono e leggono:)</em></p>
+      <blockquote>
+        <div>
+          <div class="line-block outermost">
+            <div class="line">
+              «Io vi scrivo, damigella,
+            </div>
+            <div class="inner line-block">
+              <div class="line">
+                per offrirvi la mia mano.
+              </div>
+              <div class="line">
+                So che siete tanto bella,
+              </div>
+              <div class="line">
+                ch'io son ricco è noto; ma....
+              </div>
+              <div class="line">
+                &nbsp;
+              </div>
+              <div class="line">
+                se un pochino non m'invita
+              </div>
+              <div class="line">
+                il cuor vostro, tutto è vano,
+              </div>
+              <div class="line">
+                che non bastano alla vita
+              </div>
+              <div class="line">
+                di due sposi oro e beltà.
+              </div>
+            </div>
+          </div>
+        </div>
+      </blockquote>
+      <p class="pfirst"><em class="italics">(Il loro volto s'irradia. Esse, commosse, leggono e rileggono la lettera, guardano il ritratto e si guardano tra loro con un misto di riluttanza e di contentezza.)</em></p>
+      <div class="center line-block noindent outermost">
+        <div class="line">
+          <span class="small-caps">Arunto</span>
+        </div>
+      </div>
+      <p class="pfirst"><em class="italics">(notando il loro mutamento, tra sè)</em> Lo dicevo io!... Il mezzo è sicuro! <em class="italics">(Alle fanciulle, con circospezione)</em> E se vi dicessi che a ognuno di questi ritratti corrisponde un originale e a ognuna di queste lettere un po' di vero amore, fareste il sagrifizio di... <em class="italics">rimpa...tria... re</em>?</p>
+      <div class="center line-block noindent outermost">
+        <div class="line">
+          <span class="small-caps">Le Fanciulle</span>
+        </div>
+      </div>
+      <p class="pfirst"><em class="italics">(con ostentazione)</em> Eh.... Per non essere troppo sgarbate....</p>
+      <div class="center line-block noindent outermost">
+        <div class="line">
+          <span class="small-caps">Clea</span>
+        </div>
+      </div>
+      <p class="pfirst"><em class="italics">(non potendone più)</em> E a me?</p>
+      <div class="center line-block noindent outermost">
+        <div class="line">
+          <span class="invisible pageno target" title="335" id="page-335"></span><span class="small-caps">Arunto</span>
+        </div>
+      </div>
+      <p class="pfirst"><em class="italics">(tra sè)</em> Ora posso rivelarmi, che esse, in fede mia, non si dilegueranno. <em class="italics">(A Clea, lasciando cadere di dosso il mantello e buttando via la barba)</em> La mia lettera è scritta qui <em class="italics">(indica il suo cuore)</em> e il mio ritratto è questo, <em class="italics">(indica il suo viso)</em>.</p>
+      <div class="center line-block noindent outermost">
+        <div class="line">
+          <span class="small-caps">Clea</span>
+        </div>
+      </div>
+      <p class="pfirst"><em class="italics">(sussultando di giubilo)</em> Come?! Tu non sei il vecchio romito?....</p>
+      <div class="center line-block noindent outermost">
+        <div class="line">
+          <span class="small-caps">Le Fanciulle</span>
+        </div>
+      </div>
+      <p class="pfirst">Ooooh!...</p>
+      <div class="center line-block noindent outermost">
+        <div class="line">
+          <span class="small-caps">Arunto</span>
+        </div>
+      </div>
+      <p class="pfirst">Arunto mi chiamo!</p>
+      <div class="center line-block noindent outermost">
+        <div class="line">
+          <span class="small-caps">Le Fanciulle</span>
+        </div>
+      </div>
+      <p class="pfirst"><em class="italics">(in un sommesso mormorio, fanno l'eco:)</em> Amo... amo... amo.... <em class="italics">(Indi, contemplando il ritratto e la lettera che hanno tra le mani, si fermano qua e là, formando gruppi pittoreschi.)</em></p>
+      <div class="center line-block noindent outermost">
+        <div class="line">
+          <span class="small-caps">Arunto</span>
+        </div>
+      </div>
+      <p class="center pfirst"><em class="italics">(con dolcezza, a Clea)</em></p>
+      <blockquote>
+        <div>
+          <div class="line-block outermost">
+            <div class="line">
+              Solo vincere e regnare
+            </div>
+            <div class="inner line-block">
+              <div class="line">
+                vagheggiai con voluttà:
+              </div>
+              <div class="line">
+                eran le speranze care
+              </div>
+              <div class="line">
+                della mia ingenuità.
+              </div>
+            </div>
+          </div>
+        </div>
+      </blockquote>
+      <blockquote>
+        <div>
+          <div class="line-block outermost">
+            <div class="line">
+              <span class="invisible pageno target" title="336" id="page-336"></span>Non fui mai corteggiatore
+            </div>
+            <div class="inner line-block">
+              <div class="line">
+                delle donne. Sai perchè?
+              </div>
+              <div class="line">
+                Non mai vidi lo splendore
+              </div>
+              <div class="line">
+                che rifulger vedo in te!
+              </div>
+            </div>
+          </div>
+        </div>
+      </blockquote>
+      <div class="center line-block noindent outermost">
+        <div class="line">
+          <span class="small-caps">Clea</span>
+        </div>
+      </div>
+      <blockquote>
+        <div>
+          <div class="line-block outermost">
+            <div class="line">
+              Solo vivere d'oblio
+            </div>
+            <div class="inner line-block">
+              <div class="line">
+                vagheggiai con voluttà.
+              </div>
+              <div class="line">
+                Dissi al povero cor mio:
+              </div>
+              <div class="line">
+                fuggi il mondo, fuggi, va.
+              </div>
+              <div class="line">
+                &nbsp;
+              </div>
+            </div>
+            <div class="line">
+              Dell'amore io diffidai....
+            </div>
+            <div class="inner line-block">
+              <div class="line">
+                Ne ignoravo le virtù,
+              </div>
+              <div class="line">
+                chè nessun mi parlò mai
+              </div>
+              <div class="line">
+                come adesso parli tu.
+              </div>
+            </div>
+          </div>
+        </div>
+      </blockquote>
+      <div class="center line-block noindent outermost">
+        <div class="line">
+          <span class="small-caps">Arunto</span>
+        </div>
+      </div>
+      <p class="center pfirst"><em class="italics">(con passione)</em></p>
+      <blockquote>
+        <div>
+          <div class="line-block outermost">
+            <div class="line">
+              Io, guardandoti gli occhioni,
+            </div>
+            <div class="inner line-block">
+              <div class="line">
+                vedo aprire un usciolino:
+              </div>
+              <div class="line">
+                il mio amore, ginocchioni,
+              </div>
+              <div class="line">
+                vuole entrarci, ma... prestino.
+              </div>
+            </div>
+          </div>
+        </div>
+      </blockquote>
+      <div class="center line-block noindent outermost">
+        <div class="line">
+          <span class="small-caps">Clea</span>
+        </div>
+      </div>
+      <p class="center pfirst"><em class="italics">(con dolcezza)</em></p>
+      <blockquote>
+        <div>
+          <div class="line-block outermost">
+            <div class="line">
+              Entri pure questo amore:
+            </div>
+            <div class="inner line-block">
+              <div class="line">
+                l'usciolin s'apre per lui.
+              </div>
+              <div class="line">
+                Entri e resti finchè muore....
+              </div>
+              <div class="line">
+                Non son più quella che fui!
+              </div>
+            </div>
+          </div>
+        </div>
+      </blockquote>
+      <div class="center line-block noindent outermost">
+        <div class="line">
+          <span class="small-caps">Clea e Arunto</span>
+        </div>
+      </div>
+      <p class="center pfirst"><em class="italics">(abbracciandosi)</em></p>
+      <blockquote>
+        <div>
+          <div class="line-block outermost">
+            <div class="line">
+              Di rinascere mi pare,
+            </div>
+            <div class="inner line-block">
+              <div class="line">
+                ma... non come nacqui un dì.
+              </div>
+              <div class="line">
+                <span class="invisible pageno target" title="337" id="page-337"></span>
+              </div>
+              <div class="line">
+                Io rinasco per amare
+              </div>
+              <div class="line">
+                come nasce il colibrì.
+              </div>
+              <div class="line">
+                &nbsp;
+              </div>
+            </div>
+            <div class="line">
+              Esso al nido sa portare
+            </div>
+            <div class="inner line-block">
+              <div class="line">
+                miele e amore: zuì zuì zuì....
+              </div>
+              <div class="line">
+                Di rinascere mi pare,
+              </div>
+              <div class="line">
+                ma... non come nacqui un dì.
+              </div>
+            </div>
+          </div>
+        </div>
+      </blockquote>
+      <div class="center line-block noindent outermost">
+        <div class="line">
+          <span class="small-caps">Le Fanciulle</span>
+        </div>
+      </div>
+      <p class="pfirst"><em class="italics">(intanto, continuano a contemplare il ritratto e a rileggere la lettera.)</em></p>
+      <blockquote>
+        <div>
+          <div class="line-block outermost">
+            <div class="line">
+              «Io vi scrivo, damigella,
+            </div>
+            <div class="inner line-block">
+              <div class="line">
+                per offrirvi la mia mano.
+              </div>
+              <div class="line">
+                So che siete tanto bella,
+              </div>
+              <div class="line">
+                ch'io son ricco è noto; ma....
+              </div>
+              <div class="line">
+                &nbsp;
+              </div>
+            </div>
+            <div class="line">
+              se un pochino non m'invita
+            </div>
+            <div class="inner line-block">
+              <div class="line">
+                il cuor vostro, tutto è vano,
+              </div>
+              <div class="line">
+                chè non bastano alla vita
+              </div>
+              <div class="line">
+                di due sposi oro e beltà.»
+              </div>
+            </div>
+          </div>
+        </div>
+      </blockquote>
+      <p class="pfirst"><em class="italics">(Ognuna da sè, con ostentata ingenuità)</em></p>
+      <blockquote>
+        <div>
+          <div class="line-block outermost">
+            <div class="line">
+              Offrire la mano?
+            </div>
+            <div class="inner line-block">
+              <div class="line">
+                Che mai vorrà dire?
+              </div>
+              <div class="line">
+                O Dio! Com'è strano!...
+              </div>
+              <div class="line">
+                Mi par d'arrossire!
+              </div>
+            </div>
+          </div>
+        </div>
+      </blockquote>
+      <div class="center line-block noindent outermost">
+        <div class="line">
+          <span class="small-caps">Clea e Arunto</span>
+        </div>
+      </div>
+      <p class="center pfirst"><em class="italics">(l'una accanto all'altro, in estasi)</em></p>
+      <blockquote>
+        <div>
+          <div class="line-block outermost">
+            <div class="line">
+              Mi sento l'anima
+            </div>
+            <div class="inner line-block">
+              <div class="line">
+                da un'anima ghermire,
+              </div>
+              <div class="line">
+                ed ecco stringonsi
+              </div>
+              <div class="line">
+                insiem come due spire.
+              </div>
+            </div>
+          </div>
+        </div>
+      </blockquote>
+      <blockquote>
+        <div>
+          <div class="line-block outermost">
+            <div class="line">
+              <span class="invisible pageno target" title="338" id="page-338"></span>A un filo magico,
+            </div>
+            <div class="inner line-block">
+              <div class="line">
+                ch'è un raggio dell'Eliso,
+              </div>
+              <div class="line">
+                legate, volano
+              </div>
+              <div class="line">
+                del cielo nel sorriso.
+              </div>
+            </div>
+          </div>
+        </div>
+      </blockquote>
+      <div class="center line-block noindent outermost">
+        <div class="line">
+          <span class="small-caps">Fleno</span>
+        </div>
+      </div>
+      <p class="pfirst"><em class="italics">(che sporge la testa dal finestrino, senza essere veduto, borbotta:)</em></p>
+      <blockquote>
+        <div>
+          <div class="line-block outermost">
+            <div class="line">
+              Cos'è cotesto affare?!
+            </div>
+            <div class="inner line-block">
+              <div class="line">
+                Si sono intesi già?
+              </div>
+              <div class="line">
+                Si tratta... di volare!
+              </div>
+              <div class="line">
+                A vele gonfie ei va.
+              </div>
+              <div class="line">
+                &nbsp;
+              </div>
+            </div>
+            <div class="line">
+              Ed io, che, senza vela,
+            </div>
+            <div class="inner line-block">
+              <div class="line">
+                più navigar non so,
+              </div>
+              <div class="line">
+                qui reggo la candela....
+              </div>
+              <div class="line">
+                Un bell'ufficio fo!
+              </div>
+            </div>
+          </div>
+        </div>
+      </blockquote>
+      <div class="center line-block noindent outermost">
+        <div class="line">
+          <span class="small-caps">Le Fanciulle</span>
+        </div>
+      </div>
+      <p class="pfirst"><em class="italics">(affollandosi e facendo ressa intorno ad Arunto lo interrogano in tono lamentevole.)</em></p>
+      <blockquote>
+        <div>
+          <div class="line-block outermost">
+            <div class="line">
+              O cavaliere amabile,
+            </div>
+            <div class="inner line-block">
+              <div class="line">
+                voi di lusinghe e speme
+              </div>
+              <div class="line">
+                venite <span class="target" id="apportatore">apportatore</span>.
+              </div>
+              <div class="line">
+                Or diteci, di grazia,
+              </div>
+              <div class="line">
+                quello che più ci preme:
+              </div>
+            </div>
+          </div>
+        </div>
+      </blockquote>
+      <p class="center pfirst"><em class="italics">(mostrando il ritratto)</em></p>
+      <blockquote>
+        <div>
+          <div class="line-block outermost">
+            <div class="inner line-block">
+              <div class="line">
+                dov'è questo signore?
+              </div>
+              <div class="line">
+                &nbsp;
+              </div>
+            </div>
+            <div class="line">
+              Noi ne vediam l'immagine...!
+            </div>
+            <div class="inner line-block">
+              <div class="line">
+                L'immagine è gentile;
+              </div>
+              <div class="line">
+                ma l'<span class="small-caps">uom</span> chi ce lo dà?
+              </div>
+              <div class="line">
+                Noi ne leggiam la lettera,
+              </div>
+              <div class="line">
+                <span class="invisible pageno target" title="339" id="page-339"></span>
+              </div>
+              <div class="line">
+                che è scritta in bello stile;
+              </div>
+              <div class="line">
+                ma il resto... dove sta?
+              </div>
+            </div>
+          </div>
+        </div>
+      </blockquote>
+      <div class="center line-block noindent outermost">
+        <div class="line">
+          <span class="small-caps">Arunto</span>
+        </div>
+      </div>
+      <p class="center pfirst"><em class="italics">(tra sè, maliziosamente)</em></p>
+      <blockquote>
+        <div>
+          <div class="line-block outermost">
+            <div class="line">
+              Che fretta, caspita!
+            </div>
+            <div class="inner line-block">
+              <div class="line">
+                Ho ben capito:
+              </div>
+              <div class="line">
+                lo voglion subito
+              </div>
+              <div class="line">
+                questo marito.
+              </div>
+              <div class="line">
+                &nbsp;
+              </div>
+            </div>
+            <div class="line">
+              Che sian confuse
+            </div>
+            <div class="inner line-block">
+              <div class="line">
+                a me non pare....
+              </div>
+              <div class="line">
+                Le disilluse
+              </div>
+              <div class="line">
+                si dan da fare.
+              </div>
+              <div class="line">
+                &nbsp;
+              </div>
+            </div>
+            <div class="line">
+              Il gran proposito
+            </div>
+            <div class="inner line-block">
+              <div class="line">
+                è già sfumato,
+              </div>
+              <div class="line">
+                pensando al giovine
+              </div>
+              <div class="line">
+                innamorato.
+              </div>
+              <div class="line">
+                &nbsp;
+              </div>
+            </div>
+            <div class="line">
+              Son d'una pasta
+            </div>
+            <div class="inner line-block">
+              <div class="line">
+                queste figliole!
+              </div>
+              <div class="line">
+                A lor non basta...
+              </div>
+              <div class="line">
+                di restar sole!
+              </div>
+            </div>
+          </div>
+        </div>
+      </blockquote>
+      <p class="pfirst"><em class="italics">(Rivolgendosi alle Fanciulle per tranquillarle)</em></p>
+      <blockquote>
+        <div>
+          <div class="line-block outermost">
+            <div class="line">
+              Rassicuratevi,
+            </div>
+            <div class="inner line-block">
+              <div class="line">
+                fanciulle mie.
+              </div>
+              <div class="line">
+                Altro che storie
+              </div>
+              <div class="line">
+                e fantasie!....
+              </div>
+              <div class="line">
+                &nbsp;
+              </div>
+            </div>
+            <div class="line">
+              Se l'impazienza
+            </div>
+            <div class="inner line-block">
+              <div class="line">
+                frenate un po'
+              </div>
+              <div class="line">
+                dandomi udienza,
+              </div>
+              <div class="line">
+                vi spiegherò.
+              </div>
+            </div>
+          </div>
+        </div>
+      </blockquote>
+      <p class="pfirst"><em class="italics">(Se le chiama attorno, e mentre esse sono tutte intente a udirlo, egli spiega l'enigma:)</em></p>
+      <blockquote>
+        <div>
+          <div class="line-block outermost">
+            <div class="line">
+              Di queste immagini
+            </div>
+            <div class="inner line-block">
+              <div class="line">
+                ogni fanciulla
+              </div>
+              <div class="line">
+                <span class="invisible pageno target" title="340" id="page-340"></span>
+              </div>
+              <div class="line">
+                può far degli «uomini»
+              </div>
+              <div class="line">
+                o... non far nulla.
+              </div>
+              <div class="line">
+                &nbsp;
+              </div>
+            </div>
+            <div class="line">
+              Sono ritratti
+            </div>
+            <div class="inner line-block">
+              <div class="line">
+                d'uomini veri,
+              </div>
+              <div class="line">
+                un poco matti
+              </div>
+              <div class="line">
+                sì, ma sinceri.
+              </div>
+              <div class="line">
+                &nbsp;
+              </div>
+            </div>
+            <div class="line">
+              Sposano ed amano
+            </div>
+            <div class="inner line-block">
+              <div class="line">
+                sinceramente,
+              </div>
+              <div class="line">
+                ognun dicendovi
+              </div>
+              <div class="line">
+                quello che sente.
+              </div>
+              <div class="line">
+                &nbsp;
+              </div>
+            </div>
+            <div class="line">
+              Ma se per poco
+            </div>
+            <div class="inner line-block">
+              <div class="line">
+                voi diffidate,
+              </div>
+              <div class="line">
+                vi spegne il foco....
+              </div>
+              <div class="line">
+                Ahimè! badate.
+              </div>
+            </div>
+          </div>
+        </div>
+      </blockquote>
+      <div class="center line-block noindent outermost">
+        <div class="line">
+          <span class="small-caps">Le Fanciulle</span>
+        </div>
+      </div>
+      <p class="pfirst"><em class="italics">(si mostrano vivamente emozionate e parlano tra loro con molto fervore.)</em></p>
+      <blockquote>
+        <div>
+          <div class="line-block outermost">
+            <div class="line">
+              — Da queste immagini
+            </div>
+            <div class="inner line-block">
+              <div class="line">
+                possono uscire
+              </div>
+              <div class="line">
+                proprio degli uomini?!
+              </div>
+              <div class="line">
+                &nbsp;
+              </div>
+            </div>
+            <div class="line">
+              — C'è da impazzire!
+            </div>
+            <div class="line">
+              &nbsp;
+            </div>
+            <div class="line">
+              — Sono ritratti
+            </div>
+            <div class="inner line-block">
+              <div class="line">
+                d'uomini veri?!
+              </div>
+              <div class="line">
+                &nbsp;
+              </div>
+            </div>
+            <div class="line">
+              — Vedrem dai fatti
+            </div>
+            <div class="inner line-block">
+              <div class="line">
+                se son sinceri.
+              </div>
+              <div class="line">
+                &nbsp;
+              </div>
+            </div>
+            <div class="line">
+              — Sposano ed amano
+            </div>
+            <div class="inner line-block">
+              <div class="line">
+                sinceramente?!
+              </div>
+              <div class="line">
+                &nbsp;
+              </div>
+            </div>
+            <div class="line">
+              — Fidare e credere
+            </div>
+            <div class="inner line-block">
+              <div class="line">
+                non è prudente.
+              </div>
+              <div class="line">
+                &nbsp;
+              </div>
+            </div>
+            <div class="line">
+              — Ma se per poco
+            </div>
+            <div class="inner line-block">
+              <div class="line">
+                noi diffidiamo,
+              </div>
+              <div class="line">
+                si spegne il foco....
+              </div>
+              <div class="line">
+                &nbsp;
+              </div>
+            </div>
+            <div class="line">
+              — No! no! Badiamo!
+            </div>
+          </div>
+        </div>
+      </blockquote>
+      <div class="center line-block noindent outermost">
+        <div class="line">
+          <span class="invisible pageno target" title="341" id="page-341"></span><span class="small-caps">Arunto</span>
+        </div>
+      </div>
+      <p class="center pfirst"><em class="italics">(continuando a spiegare l'enigma.)</em></p>
+      <blockquote>
+        <div>
+          <div class="line-block outermost">
+            <div class="line">
+              Di queste immagini
+            </div>
+            <div class="inner line-block">
+              <div class="line">
+                mi son munito,
+              </div>
+              <div class="line">
+                chè dentro ascondono
+              </div>
+              <div class="line">
+                un bel marito.
+              </div>
+              <div class="line">
+                &nbsp;
+              </div>
+            </div>
+            <div class="line">
+              Se dunque amate
+            </div>
+            <div class="inner line-block">
+              <div class="line">
+                intensamente,
+              </div>
+              <div class="line">
+                voi conquistate
+              </div>
+              <div class="line">
+                l'uomo latente.
+              </div>
+              <div class="line">
+                &nbsp;
+              </div>
+            </div>
+            <div class="line">
+              Tutti i miracoli
+            </div>
+            <div class="inner line-block">
+              <div class="line">
+                può far l'amore,
+              </div>
+              <div class="line">
+                che è già un fenomeno
+              </div>
+              <div class="line">
+                superiore.
+              </div>
+              <div class="line">
+                &nbsp;
+              </div>
+            </div>
+            <div class="line">
+              Ogni ritratto
+            </div>
+            <div class="inner line-block">
+              <div class="line">
+                diventerà
+              </div>
+              <div class="line">
+                un uomo adatto....
+              </div>
+              <div class="line">
+                che sposerà.
+              </div>
+            </div>
+          </div>
+        </div>
+      </blockquote>
+      <div class="center line-block noindent outermost">
+        <div class="line">
+          <span class="small-caps">Fleno</span>
+        </div>
+      </div>
+      <p class="center pfirst"><em class="italics">(tra sè)</em></p>
+      <blockquote>
+        <div>
+          <div class="line-block outermost">
+            <div class="line">
+              Ma che fa? Le piglia in giro?
+            </div>
+            <div class="line">
+              È un burlone, o è un fakiro?
+            </div>
+          </div>
+        </div>
+      </blockquote>
+      <div class="center line-block noindent outermost">
+        <div class="line">
+          <span class="small-caps">Le Fanciulle</span>
+        </div>
+      </div>
+      <p class="pfirst"><em class="italics">(raggianti, ma ancora un po' dubbiose, restano mute, perplesse.)</em></p>
+      <div class="center line-block noindent outermost">
+        <div class="line">
+          <span class="small-caps">Arunto</span>
+        </div>
+      </div>
+      <blockquote>
+        <div>
+          <div class="line-block outermost">
+            <div class="line">
+              Ebben, su, che risolvete?
+            </div>
+            <div class="line">
+              Siete, alfine, innamorate?
+            </div>
+          </div>
+        </div>
+      </blockquote>
+      <div class="center line-block noindent outermost">
+        <div class="line">
+          <span class="invisible pageno target" title="342" id="page-342"></span><span class="small-caps">Le Fanciulle</span>
+        </div>
+      </div>
+      <p class="center pfirst"><em class="italics">(pudibonde)</em></p>
+      <blockquote>
+        <div>
+          <div class="line-block outermost">
+            <div class="line">
+              Cavaliere, via, tacete!
+            </div>
+            <div class="line">
+              Perchè ci mortificate?
+            </div>
+          </div>
+        </div>
+      </blockquote>
+      <div class="center line-block noindent outermost">
+        <div class="line">
+          <span class="small-caps">Arunto</span>
+        </div>
+      </div>
+      <p class="center pfirst"><em class="italics">(in tono canzonatorio)</em></p>
+      <blockquote>
+        <div>
+          <div class="line-block outermost">
+            <div class="line">
+              Dite di no?
+            </div>
+          </div>
+        </div>
+      </blockquote>
+      <div class="center line-block noindent outermost">
+        <div class="line">
+          <span class="small-caps">Le Fanciulle</span>
+        </div>
+      </div>
+      <div class="center line-block noindent outermost">
+        <div class="line">
+          <em class="italics">(abbassano gli occhi e non rispondono.)</em>
+        </div>
+        <div class="line">
+          &nbsp;
+        </div>
+        <div class="line">
+          <em class="italics">(Pausa.)</em>
+        </div>
+      </div>
+      <div class="center line-block noindent outermost">
+        <div class="line">
+          <span class="small-caps">Arunto</span>
+        </div>
+      </div>
+      <p class="center pfirst"><em class="italics">(piegando le braccia)</em></p>
+      <blockquote>
+        <div>
+          <div class="line-block outermost">
+            <div class="line">
+              Aspetterò.
+            </div>
+          </div>
+        </div>
+      </blockquote>
+      <p class="center pfirst"><em class="italics">(Pausa.)</em></p>
+      <blockquote>
+        <div>
+          <div class="line-block outermost">
+            <div class="line">
+              Dite di sì?
+            </div>
+          </div>
+        </div>
+      </blockquote>
+      <div class="center line-block noindent outermost">
+        <div class="line">
+          <span class="small-caps">Le Fanciulle</span>
+        </div>
+      </div>
+      <p class="center pfirst"><em class="italics">(irrefrenabilmente prorompono)</em></p>
+      <blockquote>
+        <div>
+          <div class="line-block outermost">
+            <div class="line">
+              Sì, sì, sì, sì!...
+            </div>
+          </div>
+        </div>
+      </blockquote>
+      <div class="center line-block noindent outermost">
+        <div class="line">
+          <span class="small-caps">Arunto</span>
+        </div>
+      </div>
+      <blockquote>
+        <div>
+          <div class="line-block outermost">
+            <div class="line">
+              Ah! finalmente!
+            </div>
+            <div class="inner line-block">
+              <div class="line">
+                Ed ora attente,
+              </div>
+              <div class="line">
+                attente a me.
+              </div>
+            </div>
+          </div>
+        </div>
+      </blockquote>
+      <p class="pnext"><span class="invisible pageno target" title="343" id="page-343"></span><em class="italics">(Raccoglie dalle loro mani i ritratti e, con la solennità d'un ispirato, li lascia cadere a uno a uno dietro la siepe. Quindi, con gravità e mistero, che stuzzica sempre più la curiosità non disinteressata delle ragazze, aspetta il risultato del suo audace incantesimo, dicendo:)</em></p>
+      <blockquote>
+        <div>
+          <div class="line-block outermost">
+            <div class="line">
+              Uno!... due!... tre!
+            </div>
+          </div>
+        </div>
+      </blockquote>
+      <p class="pfirst"><em class="italics">(Al «tre», dietro la siepe compariscono, scattando su come fantocci da una scatola, tanti giovanotti, belli e luminosamente vestiti, quanti ritratti Arunto ha seminati; ed egli, con un gesto trionfale, esclama:)</em></p>
+      <blockquote>
+        <div>
+          <div class="line-block outermost">
+            <div class="line">
+              Chiedeste uomini?
+            </div>
+            <div class="inner line-block">
+              <div class="line">
+                Eccoli qua!
+              </div>
+            </div>
+          </div>
+        </div>
+      </blockquote>
+      <div class="center line-block noindent outermost">
+        <div class="line">
+          <span class="small-caps">Le Fanciulle</span>
+        </div>
+      </div>
+      <p class="pfirst"><em class="italics">(pazze di gioia, corrono ognuna presso il rispettivo fidanzato.)</em></p>
+      <blockquote>
+        <div>
+          <div class="line-block outermost">
+            <div class="line">
+              Oh, l'ineffabile
+            </div>
+            <div class="inner line-block">
+              <div class="line">
+                felicità!...
+              </div>
+            </div>
+          </div>
+        </div>
+      </blockquote>
+      <div class="center line-block noindent outermost">
+        <div class="line">
+          <span class="small-caps">I Giovanotti</span>
+        </div>
+      </div>
+      <p class="pfirst"><em class="italics">(amorosamente, parlano, ognuno alla propria sposina.)</em></p>
+      <blockquote>
+        <div>
+          <div class="line-block outermost">
+            <div class="line">
+              Io ti ho scritto, damigella,
+            </div>
+            <div class="inner line-block">
+              <div class="line">
+                per offrirti la mia mano.
+              </div>
+              <div class="line">
+                Lo sapevo che sei bella;
+              </div>
+              <div class="line">
+                ch'io son ricco è noto; ma,...
+              </div>
+            </div>
+          </div>
+        </div>
+      </blockquote>
+      <div class="center line-block noindent outermost">
+        <div class="line">
+          <span class="small-caps">Le Fanciulle</span>
+        </div>
+      </div>
+      <blockquote>
+        <div>
+          <div class="line-block outermost">
+            <div class="line">
+              È il mio core che t'invita.
+            </div>
+            <div class="inner line-block">
+              <div class="line">
+                T'ho chiamato da lontano....
+              </div>
+              <div class="line">
+                <span class="invisible pageno target" title="344" id="page-344"></span>
+              </div>
+              <div class="line">
+                Già di te m'ero invaghita.
+              </div>
+              <div class="line">
+                Dove? Quando? Chi lo sa!
+              </div>
+            </div>
+          </div>
+        </div>
+      </blockquote>
+      <div class="center line-block noindent outermost">
+        <div class="line">
+          <span class="small-caps">Arunto</span>
+        </div>
+        <div class="line">
+          &nbsp;
+        </div>
+        <div class="line">
+          <em class="italics">(alle Fanciulle)</em>
+        </div>
+      </div>
+      <p class="pfirst">Sicchè voi ritornate a Zano con me?</p>
+      <div class="center line-block noindent outermost">
+        <div class="line">
+          <span class="small-caps">Le Fanciulle</span>
+        </div>
+        <div class="line">
+          &nbsp;
+        </div>
+        <div class="line">
+          <em class="italics">(vociferando)</em>
+        </div>
+      </div>
+      <p class="pfirst">Ritorniamo! Ritorniamo!</p>
+      <div class="center line-block noindent outermost">
+        <div class="line">
+          <span class="small-caps">Arunto</span>
+        </div>
+      </div>
+      <p class="pfirst">Io metto ai vostri piedi la mia riconoscenza. Ora che la mia impresa è riuscita posso dirvene la ragione e posso dirvi quanto vi debbo.</p>
+      <div class="center line-block noindent outermost">
+        <div class="line">
+          <span class="small-caps">Fleno</span>
+        </div>
+      </div>
+      <p class="pfirst"><em class="italics">(che, senza esser visto, non ha mai cessato di far capolino dal buco del suo tugurio, sporge ora un poco più il capo per meglio udire, e mormora:)</em></p>
+      <p class="pnext">Finalmente capirò anch'io qualche cosa.</p>
+      <div class="center line-block noindent outermost">
+        <div class="line">
+          <span class="small-caps">Arunto</span>
+        </div>
+        <div class="line">
+          &nbsp;
+        </div>
+        <div class="line">
+          <em class="italics">(alle Fanciulle)</em>
+        </div>
+      </div>
+      <p class="pfirst">Quando voi, disilluse, fuggiste da Zano, quel popolo aveva discacciato dal trono il re Fleno... e aveva fatto benissimo!</p>
+      <div class="center line-block noindent outermost">
+        <div class="line">
+          <span class="invisible pageno target" title="345" id="page-345"></span><span class="small-caps">Fleno</span>
+        </div>
+        <div class="line">
+          &nbsp;
+        </div>
+        <div class="line">
+          <em class="italics">(offeso, tra sè:)</em>
+        </div>
+      </div>
+      <p class="pfirst">Oh! questo poi!</p>
+      <div class="center line-block noindent outermost">
+        <div class="line">
+          <span class="small-caps">Arunto</span>
+        </div>
+      </div>
+      <p class="pfirst">Un pessimo arnese, senza carattere, senza energia, senza intelligenza...</p>
+      <div class="center line-block noindent outermost">
+        <div class="line">
+          <span class="small-caps">Le Fanciulle</span>
+        </div>
+      </div>
+      <p class="pfirst">È vero! È vero!</p>
+      <div class="center line-block noindent outermost">
+        <div class="line">
+          <span class="small-caps">Fleno</span>
+        </div>
+        <div class="line">
+          &nbsp;
+        </div>
+        <div class="line">
+          <em class="italics">(tra sè:)</em>
+        </div>
+      </div>
+      <p class="pfirst">Cortesissime!</p>
+      <div class="center line-block noindent outermost">
+        <div class="line">
+          <span class="small-caps">Arunto</span>
+        </div>
+      </div>
+      <p class="pfirst">Ebbene, io mi presentai candidato al trono. Promisi mari e monti, e spesi un fiume... di quattrini, ma non conchiusi nulla. Senonchè, il popolo di Zano mi fece sapere ch'esso concederebbe il trono a chi ritrovasse e riconducesse nel regno le Fanciulle disilluse. Accettai il patto, compresi che la disillusione, con la relativa fuga, non poteva avere avuto altra causa che la mancanza di quel prezioso gingillo che si chiama marito; e quindi, provvedutomi di questo articolo in effigie e in <span class="target" id="epistola">epistola</span>, impresi il viaggio e... il resto lo sapete.</p>
+      <blockquote>
+        <div>
+          <div class="line-block outermost">
+            <div class="line">
+              Ogni miracolo
+            </div>
+            <div class="inner line-block">
+              <div class="line">
+                può far l'amore,
+              </div>
+              <div class="line">
+                che è già un fenomeno
+              </div>
+              <div class="line">
+                superiore.
+              </div>
+            </div>
+          </div>
+        </div>
+      </blockquote>
+      <p class="pnext"><span class="invisible pageno target" title="346" id="page-346"></span>L'amore, quando è verace, dà corpo alle ombre, fa d'un ritratto un uomo, fa di un nulla un marito....</p>
+      <div class="center line-block noindent outermost">
+        <div class="line">
+          <span class="small-caps">Fleno</span>
+        </div>
+        <div class="line">
+          &nbsp;
+        </div>
+        <div class="line">
+          <em class="italics">(tra sè:)</em>
+        </div>
+      </div>
+      <p class="pfirst">... e di un marito un nulla!</p>
+      <div class="center line-block noindent outermost">
+        <div class="line">
+          <span class="small-caps">Arunto</span>
+        </div>
+      </div>
+      <p class="pfirst">E, difatti, sotto la pioggia del vostro amore, i mariti vi sono spuntati dinanzi... come i funghi. In conclusione, io vi condurrò a Zano, avrò il premio, sarò acclamato re, e, per regalo di nozze, offrirò alla mia sposa, una corona... di Regina.</p>
+      <div class="center line-block noindent outermost">
+        <div class="line">
+          <span class="small-caps">Giovanotti e Fanciulle</span>
+        </div>
+      </div>
+      <p class="pfirst">Sia gloria ad Arunto, il futuro re di Zano!</p>
+      <div class="center line-block noindent outermost">
+        <div class="line">
+          <span class="small-caps">Fleno</span>
+        </div>
+        <div class="line">
+          &nbsp;
+        </div>
+        <div class="line">
+          <em class="italics">(uscendo, modestamente, dal tugurio)</em>
+        </div>
+      </div>
+      <p class="pfirst">Domando la parola per un fatto personale.</p>
+      <div class="center line-block noindent outermost">
+        <div class="line">
+          <span class="small-caps">Giovanotti e Fanciulle</span>
+        </div>
+      </div>
+      <p class="pfirst">Chi è? Chi è?...</p>
+      <div class="center line-block noindent outermost">
+        <div class="line">
+          <span class="small-caps">Fleno</span>
+        </div>
+        <div class="line">
+          &nbsp;
+        </div>
+        <div class="line">
+          <em class="italics">(alle Fanciulle)</em>
+        </div>
+      </div>
+      <p class="pfirst">Non mi riconoscete, eh? Il vostro amico, il vostro vicino, il vostro povero romito.... Signorine <span class="invisible pageno target" title="347" id="page-347"></span>mie, avete creduto per tanto tempo alla mia Vecchiezza: ma essa era falsa, come la vostra Disillusione.</p>
+      <div class="center line-block noindent outermost">
+        <div class="line">
+          <span class="small-caps">Le Fanciulle</span>
+        </div>
+      </div>
+      <p class="pfirst">E allora, chi eravate? Chi siete?</p>
+      <div class="center line-block noindent outermost">
+        <div class="line">
+          <span class="small-caps">Fleno</span>
+        </div>
+      </div>
+      <p class="pfirst">Io ero e sono... Fleno, il re discacciato da Zano.</p>
+      <div class="center line-block noindent outermost">
+        <div class="line">
+          <span class="italics">(Sorpresa generale.)</span>
+        </div>
+      </div>
+      <div class="center line-block noindent outermost">
+        <div class="line">
+          <span class="small-caps">Una delle Fanciulle</span>
+        </div>
+      </div>
+      <p class="pfirst">Sì... ora mi rammento di avervi visto una volta in funzione. Fu il giorno in cui cadeste da cavallo.</p>
+      <div class="center line-block noindent outermost">
+        <div class="line">
+          <span class="small-caps">Fleno</span>
+        </div>
+      </div>
+      <p class="pfirst">Oh, non mi parlate di quel cavallo!... Era un asino!</p>
+      <div class="center line-block noindent outermost">
+        <div class="line">
+          <span class="small-caps">Arunto</span>
+        </div>
+      </div>
+      <p class="pfirst">... Mi scuserai se t'ho fatto un po' di critica.... Vuoi che io rettifichi?</p>
+      <div class="center line-block noindent outermost">
+        <div class="line">
+          <span class="small-caps">Fleno</span>
+        </div>
+      </div>
+      <p class="pfirst">Non rettificare, ma permettimi invece di fare appello alla tua coscienza. Prestandoti la mia Vecchiezza, t'ho dato modo di guadagnare un regno e una donna, che vale più del regno. Vuoi essere riconoscente? <span class="invisible pageno target" title="348" id="page-348"></span>Tieniti la donna e cedi il regno a me. A quanto ho sentito, chiunque ricondurrà queste fanciulle a Zano avrà in premio il trono rimasto vuoto. Lascia che riconduca io le belle fuggitive in patria. Così il premio sarà mio e riavrò quel che mi fu tolto.</p>
+      <div class="center line-block noindent outermost">
+        <div class="line">
+          <span class="small-caps">Arunto</span>
+        </div>
+        <div class="line">
+          &nbsp;
+        </div>
+        <div class="line">
+          <em class="italics">(un po' titubante)</em>
+        </div>
+      </div>
+      <p class="pfirst">Ma io ho promesso il regno alla mia fidanzata... È lei che deve decidere.</p>
+      <div class="center line-block noindent outermost">
+        <div class="line">
+          <span class="small-caps">Clea</span>
+        </div>
+        <div class="line">
+          &nbsp;
+        </div>
+        <div class="line">
+          <em class="italics">(solennemente)</em>
+        </div>
+      </div>
+      <p class="pfirst">A me basta il Regno dell'Amore! Ritorni Fleno al suo trono!</p>
+      <div class="center line-block noindent outermost">
+        <div class="line">
+          <span class="small-caps">Fleno</span>
+        </div>
+        <div class="line">
+          &nbsp;
+        </div>
+        <div class="line">
+          <em class="italics">(con pari solennità, stringendole la mano)</em>
+        </div>
+      </div>
+      <p class="pfirst">Signorina,... voi siete un galantuomo!</p>
+      <div class="center line-block noindent outermost">
+        <div class="line">
+          <span class="small-caps">Arunto</span>
+        </div>
+      </div>
+      <p class="pfirst">Va, dunque, buon Fleno: mettiti alla testa di queste felici coppie di sposi. Chiudi un occhio per la strada... e va a rifarti re!</p>
+      <div class="center line-block noindent outermost">
+        <div class="line">
+          <span class="small-caps">Giovanotti e Fanciulle</span>
+        </div>
+      </div>
+      <p class="pfirst">Sia gloria a Fleno, il futuro re di Zano!</p>
+      <div class="center line-block noindent outermost">
+        <div class="line">
+          <span class="invisible pageno target" title="349" id="page-349"></span><span class="small-caps">Arunto</span>
+        </div>
+      </div>
+      <p class="pfirst">Con lo stesso entusiasmo avete acclamato me un minuto fa!</p>
+      <div class="center line-block noindent outermost">
+        <div class="line">
+          <span class="small-caps">Fleno</span>
+        </div>
+      </div>
+      <p class="pfirst">La politica, mio caro, è opportunista come il cuore della donna! Ed ora... voglio lasciare a queste contrade un ricordo del falso vecchio romito, la cui falsità è stata utile a tanta gente giovane e forte. Ecco un robusto tronco d'albero eterno <em class="italics">(mostrando ad Arunto un tronco d'albero, che ha alla cima quasi l'impronta d'una faccia umana)</em> il quale continuerà a rappresentare l'esperienza della Vecchiezza e la forza della Gioventù. <em class="italics">(Truccando il tronco da romito, col mantello, con la barba e col bastone)</em> Chi sa che anch'esso, con questi panni e questa barba, non debba rendere qualche servigio all'umanità! <em class="italics">(Il tronco ha preso l'aspetto del vecchio romito)</em> Così.... Così! <em class="italics">(Salutando il fantoccio)</em> Addio, addio, romito!</p>
+      <div class="center line-block noindent outermost">
+        <div class="line">
+          <span class="small-caps">Tutti</span>
+        </div>
+      </div>
+      <p class="pfirst">Addio, romito! Addio!</p>
+      <div class="center line-block noindent outermost">
+        <div class="line">
+          <span class="italics">(Grande animazione, saluti, strette di mano, manifestazioni di tenerezza e di allegria.)</span>
+        </div>
+      </div>
+      <div class="center line-block noindent outermost">
+        <div class="line">
+          <span class="small-caps">Clea</span>
+        </div>
+      </div>
+      <p class="pfirst">Addio, compagne d'esilio!</p>
+      <div class="center line-block noindent outermost">
+        <div class="line">
+          <span class="invisible pageno target" title="350" id="page-350"></span><span class="small-caps">Le Fanciulle</span>
+        </div>
+      </div>
+      <p class="pfirst">Addio, Clea!</p>
+      <div class="center line-block noindent outermost">
+        <div class="line">
+          <span class="small-caps">Arunto</span>
+        </div>
+      </div>
+      <p class="pfirst">Addio, Fleno! Addio, fanciulle!</p>
+      <div class="center line-block noindent outermost">
+        <div class="line">
+          <span class="small-caps">Arunto e Clea</span>
+        </div>
+      </div>
+      <p class="pfirst">Noi andiamo a far l'amore!</p>
+      <div class="center line-block noindent outermost">
+        <div class="line">
+          <span class="small-caps">Le Fanciulle</span>
+        </div>
+      </div>
+      <p class="pfirst">Noi andiamo a far le mogli!</p>
+      <div class="center line-block noindent outermost">
+        <div class="line">
+          <span class="small-caps">Arunto e Clea</span>
+        </div>
+      </div>
+      <p class="pfirst">Non è lo stesso!</p>
+      <div class="center line-block noindent outermost">
+        <div class="line">
+          <span class="small-caps">Fleno</span>
+        </div>
+      </div>
+      <p class="pfirst">Io vado a non far niente!</p>
+      <p class="pnext"><em class="italics">(Si avvia su per un erto sentiero, e, capitanando le coppie degli sposi, le esorta, con gesto di trionfatore, a seguirlo)</em>.</p>
+      <div class="center line-block noindent outermost">
+        <div class="line">
+          <span class="small-caps">Tutti</span>
+        </div>
+      </div>
+      <p class="pfirst">Viva il Re! Viva l'Amore! Viva il Matrimonio!</p>
+      <p class="pnext"><em class="italics">(L'animazione cresce. — Arunto e Clea, affascinati, abbracciati, s'incamminano su per un sentiero opposto. — I vapori dell'atmosfera si vanno diradando... come la pazienza del pubblico.)</em></p>
+      <div class="center line-block noindent outermost">
+        <div class="line">
+          <span class="invisible pageno target" title="351" id="page-351"></span><span class="small-caps">Arunto</span>
+        </div>
+      </div>
+      <p class="center pfirst"><em class="italics">(a Clea)</em></p>
+      <blockquote>
+        <div>
+          <div class="line-block outermost">
+            <div class="line">
+              Vieni, vieni, mia Regina,
+            </div>
+            <div class="inner line-block">
+              <div class="line">
+                dove un suddito sarò.
+              </div>
+              <div class="line">
+                È quell'isola divina,
+              </div>
+              <div class="line">
+                che Citera si chiamò.
+              </div>
+            </div>
+          </div>
+        </div>
+      </blockquote>
+      <div class="center line-block noindent outermost">
+        <div class="line">
+          <span class="small-caps">Clea</span>
+        </div>
+      </div>
+      <p class="center pfirst"><em class="italics">(ad Arunto)</em></p>
+      <blockquote>
+        <div>
+          <div class="line-block outermost">
+            <div class="line">
+              Purchè sia molto vicina,
+            </div>
+            <div class="inner line-block">
+              <div class="line">
+                purchè sia piena di te,
+              </div>
+              <div class="line">
+                non voglio esserne Regina:
+              </div>
+              <div class="line">
+                tu devi essere il mio re.
+              </div>
+            </div>
+          </div>
+        </div>
+      </blockquote>
+      <div class="center line-block noindent outermost">
+        <div class="line">
+          <span class="small-caps">Fleno</span>
+        </div>
+      </div>
+      <p class="center pfirst"><em class="italics">(alle coppie)</em></p>
+      <blockquote>
+        <div>
+          <div class="line-block outermost">
+            <div class="line">
+              Il sentiero è lungo e annoia
+            </div>
+            <div class="inner line-block">
+              <div class="line">
+                chi pedestre a Zano va;
+              </div>
+              <div class="line">
+                ma... c'è qualche scorciatoia...
+              </div>
+              <div class="line">
+                che opportuna vi parrà.
+              </div>
+            </div>
+          </div>
+        </div>
+      </blockquote>
+      <div class="center line-block noindent outermost">
+        <div class="line">
+          <span class="small-caps">Tutti</span>
+        </div>
+      </div>
+      <p class="pfirst"><em class="italics">(agitando i fazzoletti, s'allontanano, e, scambiandosi saluti romorosamente, anche salutano e risalutano il tronco d'albero, che forse vorrebbe rispondere, ma non può. — Una bianchissima luce inonda la scena. — Cala la tela lentamente.)</em></p>
+      <div class="vspace" style="height: 2em"></div>
+      <hr class="docutils" />
+      <div class="clearpage"></div>
+      <div class="topic">
+        <p class="center level-2 pfirst title topic-title topic-title first">Nota del Trascrittore</p>
+        <p class="pfirst">Ortografia e punteggiatura originali sono state mantenute correggendo senza annotazione minimi errori tipografici. Sono stati corretti i seguenti refusi (tra parentesi il testo originale):</p>
+        <blockquote>
+          <div>
+            <div class="line-block outermost">
+              <div class="line">
+                333 — aprendo la <a class="reference internal pginternal" href="#borsa">borsa</a> [porta], tra sè
+              </div>
+              <div class="line">
+                338 — venite <a class="reference internal pginternal" href="#apportatore">apportatore</a> [appartatore]
+              </div>
+              <div class="line">
+                345 — in effigie e in <a class="reference internal pginternal" href="#epistola">epistola</a> [espistola]
+              </div>
+            </div>
+          </div>
+        </blockquote>
+      </div>
+      <div class="vspace" style="height: 5em"></div>
+      <div class="backmatter"></div>
+    </div>
+  </div>
+</body>
+</html>
